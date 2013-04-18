@@ -1,0 +1,60 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="EXIF_Make">NIKON CORPORATION</MDI>
+    <MDI key="EXIF_Model">NIKON D7000</MDI>
+    <MDI key="EXIF_Orientation">1</MDI>
+    <MDI key="EXIF_XResolution">(72)</MDI>
+    <MDI key="EXIF_YResolution">(72)</MDI>
+    <MDI key="EXIF_ResolutionUnit">2</MDI>
+    <MDI key="EXIF_Software">QuickTime 7.6.6</MDI>
+    <MDI key="EXIF_DateTime">2013:01:17 08:13:39</MDI>
+    <MDI key="EXIF_Artist"></MDI>
+    <MDI key="EXIF_YCbCrPositioning">2</MDI>
+    <MDI key="EXIF_Copyright"></MDI>
+    <MDI key="EXIF_ExposureTime">(0.0025)</MDI>
+    <MDI key="EXIF_FNumber">(10)</MDI>
+    <MDI key="EXIF_ExposureProgram">2</MDI>
+    <MDI key="EXIF_ISOSpeedRatings">100</MDI>
+    <MDI key="EXIF_ExifVersion">0220</MDI>
+    <MDI key="EXIF_DateTimeOriginal">2011:06:14 07:50:14</MDI>
+    <MDI key="EXIF_DateTimeDigitized">2011:06:14 07:50:14</MDI>
+    <MDI key="EXIF_ComponentsConfiguration">0x1 0x2 0x3 00</MDI>
+    <MDI key="EXIF_CompressedBitsPerPixel">(4)</MDI>
+    <MDI key="EXIF_ExposureBiasValue">(0)</MDI>
+    <MDI key="EXIF_MaxApertureValue">(3.6)</MDI>
+    <MDI key="EXIF_MeteringMode">5</MDI>
+    <MDI key="EXIF_LightSource">9</MDI>
+    <MDI key="EXIF_Flash">16</MDI>
+    <MDI key="EXIF_FocalLength">(18)</MDI>
+    <MDI key="EXIF_MakerNote">Nikon</MDI>
+    <MDI key="EXIF_UserComment"></MDI>
+    <MDI key="EXIF_SubSecTime">50</MDI>
+    <MDI key="EXIF_SubSecTime_Original">50</MDI>
+    <MDI key="EXIF_SubSecTime_Digitized">50</MDI>
+    <MDI key="EXIF_FlashpixVersion">0100</MDI>
+    <MDI key="EXIF_ColorSpace">1</MDI>
+    <MDI key="EXIF_PixelXDimension">4928</MDI>
+    <MDI key="EXIF_PixelYDimension">3264</MDI>
+    <MDI key="EXIF_SensingMethod">2</MDI>
+    <MDI key="EXIF_FileSource">0x3</MDI>
+    <MDI key="EXIF_SceneType">0x1</MDI>
+    <MDI key="EXIF_CustomRendered">0</MDI>
+    <MDI key="EXIF_ExposureMode">0</MDI>
+    <MDI key="EXIF_WhiteBalance">1</MDI>
+    <MDI key="EXIF_DigitalZoomRatio">(1)</MDI>
+    <MDI key="EXIF_FocalLengthIn35mmFilm">27</MDI>
+    <MDI key="EXIF_SceneCaptureType">0</MDI>
+    <MDI key="EXIF_Contrast">0</MDI>
+    <MDI key="EXIF_Saturation">0</MDI>
+    <MDI key="EXIF_Sharpness">0</MDI>
+    <MDI key="EXIF_SubjectDistanceRange">0</MDI>
+    <MDI key="EXIF_GPSVersionID">0x2 0x3 00 00</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Description>Layer_1</Description>
+    <ColorInterp>Red</ColorInterp>
+    <Metadata>
+      <MDI key="LAYER_TYPE">athematic</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>

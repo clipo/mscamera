@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 #!/usr/bin/env python
 ###############################################################################
 # $Id$
+=======
+#!/usr/bin/env python2.7
+###############################################################################
+# $Id: gdal_merge.py 24065 2012-03-04 00:35:26Z warmerdam $
+>>>>>>> updates
 #
 # Project:  InSAR Peppers
 # Purpose:  Module to extract data from many rasters into one output.
@@ -8,24 +14,40 @@
 #
 ###############################################################################
 # Copyright (c) 2000, Atlantis Scientific Inc. (www.atlsci.com)
+<<<<<<< HEAD
 #
+=======
+# 
+>>>>>>> updates
 # This library is free software; you can redistribute it and/or
 # modify it under the terms of the GNU Library General Public
 # License as published by the Free Software Foundation; either
 # version 2 of the License, or (at your option) any later version.
+<<<<<<< HEAD
 #
+=======
+# 
+>>>>>>> updates
 # This library is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 # Library General Public License for more details.
+<<<<<<< HEAD
 #
+=======
+# 
+>>>>>>> updates
 # You should have received a copy of the GNU Library General Public
 # License along with this library; if not, write to the
 # Free Software Foundation, Inc., 59 Temple Place - Suite 330,
 # Boston, MA 02111-1307, USA.
 ###############################################################################
 # changes 29Apr2011
+<<<<<<< HEAD
 # if the input image is a multi-band one, use all
+=======
+# if the input image is a multi-band one, use all 
+>>>>>>> updates
 # the channels in building the stack
 # anssi.pekkarinen@fao.org
 
@@ -72,10 +94,17 @@ def raster_copy( s_fh, s_xoff, s_yoff, s_xsize, s_ysize, s_band_n,
                              t_xsize, t_ysize, t_band.DataType )
     t_band.WriteRaster( t_xoff, t_yoff, t_xsize, t_ysize,
                         data, t_xsize, t_ysize, t_band.DataType )
+<<<<<<< HEAD
 
 
     return 0
 
+=======
+        
+
+    return 0
+    
+>>>>>>> updates
 # =============================================================================
 def raster_copy_with_nodata( s_fh, s_xoff, s_yoff, s_xsize, s_ysize, s_band_n,
                              t_fh, t_xoff, t_yoff, t_xsize, t_ysize, t_band_n,
@@ -84,7 +113,11 @@ def raster_copy_with_nodata( s_fh, s_xoff, s_yoff, s_xsize, s_ysize, s_band_n,
         import numpy as Numeric
     except ImportError:
         import Numeric
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> updates
     if verbose != 0:
         print('Copy %d,%d,%d,%d to %d,%d,%d,%d.' \
               % (s_xoff, s_yoff, s_xsize, s_ysize,
@@ -103,7 +136,11 @@ def raster_copy_with_nodata( s_fh, s_xoff, s_yoff, s_xsize, s_ysize, s_band_n,
     t_band.WriteArray( to_write, t_xoff, t_yoff )
 
     return 0
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> updates
 # =============================================================================
 def names_to_fileinfos( names ):
     """
@@ -114,7 +151,11 @@ def names_to_fileinfos( names ):
     Returns a list of file_info objects.  There may be less file_info objects
     than names if some of the names could not be opened as GDAL files.
     """
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> updates
     file_infos = []
     for name in names:
         fi = file_info()
@@ -201,7 +242,11 @@ class file_info:
         else:
             tgw_uly = max(t_uly,self.uly)
             tgw_lry = min(t_lry,self.lry)
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> updates
         # do they even intersect?
         if tgw_ulx >= tgw_lrx:
             return 1
@@ -209,7 +254,11 @@ class file_info:
             return 1
         if t_geotransform[5] > 0 and tgw_uly >= tgw_lry:
             return 1
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> updates
         # compute target window in pixel coordinates.
         tw_xoff = int((tgw_ulx - t_geotransform[0]) / t_geotransform[1] + 0.1)
         tw_yoff = int((tgw_uly - t_geotransform[3]) / t_geotransform[5] + 0.1)
@@ -276,7 +325,11 @@ def main( argv=None ):
     band_type = None
     createonly = 0
     bTargetAlignedPixels = False
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> updates
     gdal.AllRegister()
     if argv is None:
         argv = sys.argv
@@ -393,7 +446,11 @@ def main( argv=None ):
         uly = file_infos[0].uly
         lrx = file_infos[0].lrx
         lry = file_infos[0].lry
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> updates
         for fi in file_infos:
             ulx = min(ulx, fi.ulx)
             uly = max(uly, fi.uly)
@@ -411,16 +468,27 @@ def main( argv=None ):
     gdal.PushErrorHandler( 'CPLQuietErrorHandler' )
     t_fh = gdal.Open( out_file, gdal.GA_Update )
     gdal.PopErrorHandler()
+<<<<<<< HEAD
 
     # Create output file if it does not already exist.
     if t_fh is None:
 
+=======
+    
+    # Create output file if it does not already exist.
+    if t_fh is None:
+    
+>>>>>>> updates
         if bTargetAlignedPixels:
             ulx = math.floor(ulx / psize_x) * psize_x
             lrx = math.ceil(lrx / psize_x) * psize_x
             lry = math.floor(lry / -psize_y) * -psize_y
             uly = math.ceil(uly / -psize_y) * -psize_y
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> updates
         geotransform = [ulx, psize_x, 0, uly, 0, psize_y]
 
         xsize = int((lrx - ulx) / geotransform[1] + 0.5)
@@ -441,7 +509,11 @@ def main( argv=None ):
         if t_fh is None:
             print('Creation failed, terminating gdal_merge.')
             sys.exit( 1 )
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> updates
         t_fh.SetGeoTransform( geotransform )
         t_fh.SetProjection( file_infos[0].projection )
 
@@ -451,7 +523,11 @@ def main( argv=None ):
         if separate != 0:
             bands=0
             for fi in file_infos:
+<<<<<<< HEAD
                 bands=bands + fi.bands
+=======
+                bands=bands + fi.bands            
+>>>>>>> updates
             if t_fh.RasterCount < bands :
                 print('Existing output file has less bands than the input files. You should delete it before. Terminating gdal_merge.')
                 sys.exit( 1 )
@@ -478,11 +554,19 @@ def main( argv=None ):
     if quiet == 0 and verbose == 0:
         progress( 0.0 )
     fi_processed = 0
+<<<<<<< HEAD
 
     for fi in file_infos:
         if createonly != 0:
             continue
 
+=======
+    
+    for fi in file_infos:
+        if createonly != 0:
+            continue
+        
+>>>>>>> updates
         if verbose != 0:
             print("")
             print("Processing file %5d of %5d, %6.3f%% completed." \
@@ -497,11 +581,19 @@ def main( argv=None ):
             for band in range(1, fi.bands+1):
                 fi.copy_into( t_fh, band, t_band, nodata )
                 t_band = t_band+1
+<<<<<<< HEAD
 
         fi_processed = fi_processed+1
         if quiet == 0 and verbose == 0:
             progress( fi_processed / float(len(file_infos))  )
 
+=======
+            
+        fi_processed = fi_processed+1
+        if quiet == 0 and verbose == 0:
+            progress( fi_processed / float(len(file_infos))  )
+    
+>>>>>>> updates
     # Force file to be closed.
     t_fh = None
 

@@ -1,0 +1,74 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="EXIF_Artist"></MDI>
+    <MDI key="EXIF_CFAPattern">00 0x2 00 0x2 00 0x1 0x1 0x2</MDI>
+    <MDI key="EXIF_ColorSpace">1</MDI>
+    <MDI key="EXIF_ComponentsConfiguration">0x1 0x2 0x3 00</MDI>
+    <MDI key="EXIF_CompressedBitsPerPixel">(4)</MDI>
+    <MDI key="EXIF_Contrast">0</MDI>
+    <MDI key="EXIF_Copyright"></MDI>
+    <MDI key="EXIF_CustomRendered">0</MDI>
+    <MDI key="EXIF_DateTime">2011:05:28 13:37:33</MDI>
+    <MDI key="EXIF_DateTimeDigitized">2011:05:28 13:37:33</MDI>
+    <MDI key="EXIF_DateTimeOriginal">2011:05:28 13:37:33</MDI>
+    <MDI key="EXIF_DigitalZoomRatio">(1)</MDI>
+    <MDI key="EXIF_ExifVersion">0230</MDI>
+    <MDI key="EXIF_ExposureBiasValue">(0)</MDI>
+    <MDI key="EXIF_ExposureMode">0</MDI>
+    <MDI key="EXIF_ExposureProgram">0</MDI>
+    <MDI key="EXIF_ExposureTime">(0.003125)</MDI>
+    <MDI key="EXIF_FileSource">0x3</MDI>
+    <MDI key="EXIF_Flash">24</MDI>
+    <MDI key="EXIF_FlashpixVersion">0100</MDI>
+    <MDI key="EXIF_FNumber">(9)</MDI>
+    <MDI key="EXIF_FocalLength">(18)</MDI>
+    <MDI key="EXIF_FocalLengthIn35mmFilm">27</MDI>
+    <MDI key="EXIF_GainControl">0</MDI>
+    <MDI key="EXIF_GPSVersionID">0x2 0x3 00 00</MDI>
+    <MDI key="EXIF_Interoperability_Index">R98</MDI>
+    <MDI key="EXIF_Interoperability_Version">0x30 0x31 0x30 0x30</MDI>
+    <MDI key="EXIF_ISOSpeedRatings">100</MDI>
+    <MDI key="EXIF_LightSource">0</MDI>
+    <MDI key="EXIF_Make">NIKON CORPORATION</MDI>
+    <MDI key="EXIF_MakerNote">Nikon</MDI>
+    <MDI key="EXIF_MaxApertureValue">(3.6)</MDI>
+    <MDI key="EXIF_MeteringMode">5</MDI>
+    <MDI key="EXIF_Model">NIKON D7000</MDI>
+    <MDI key="EXIF_Orientation">1</MDI>
+    <MDI key="EXIF_PixelXDimension">4928</MDI>
+    <MDI key="EXIF_PixelYDimension">3264</MDI>
+    <MDI key="EXIF_ResolutionUnit">2</MDI>
+    <MDI key="EXIF_Saturation">0</MDI>
+    <MDI key="EXIF_SceneCaptureType">0</MDI>
+    <MDI key="EXIF_SceneType">0x1</MDI>
+    <MDI key="EXIF_SensingMethod">2</MDI>
+    <MDI key="EXIF_Sharpness">0</MDI>
+    <MDI key="EXIF_Software">Ver.1.01 </MDI>
+    <MDI key="EXIF_SubjectDistanceRange">0</MDI>
+    <MDI key="EXIF_SubSecTime">80</MDI>
+    <MDI key="EXIF_SubSecTime_Digitized">80</MDI>
+    <MDI key="EXIF_SubSecTime_Original">80</MDI>
+    <MDI key="EXIF_UserComment"></MDI>
+    <MDI key="EXIF_WhiteBalance">0</MDI>
+    <MDI key="EXIF_XResolution">(300)</MDI>
+    <MDI key="EXIF_YCbCrPositioning">2</MDI>
+    <MDI key="EXIF_YResolution">(300)</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Description>Layer_1</Description>
+    <ColorInterp>Red</ColorInterp>
+    <Histograms>
+      <HistItem>
+        <HistMin>-0.498046875</HistMin>
+        <HistMax>255.498046875</HistMax>
+        <BucketCount>256</BucketCount>
+        <IncludeOutOfRange>0</IncludeOutOfRange>
+        <Approximate>1</Approximate>
+        <HistCounts>429|1658|1277|967|822|858|1242|1212|1344|1712|3099|4496|5684|6501|7065|7436|8552|9050|9175|8129|6812|5068|4128|3795|3070|2642|2172|1815|1556|1310|1098|836|687|602|527|371|282|208|194|138|116|87|91|76|71|67|49|59|37|42|36|37|26|23|30|27|30|21|25|17|26|18|15|15|11|19|14|17|7|10|7|7|8|9|4|9|10|3|3|6|7|3|9|9|6|5|7|9|48|236|432|676|819|1015|678|213|289|950|1503|1067|294|151|577|1820|2907|2042|661|136|382|1015|1504|2353|2212|1654|1712|2750|3330|3452|2550|2115|1913|1401|394|402|590|2520|6114|4979|2790|2212|2362|1918|623|94|17|49|477|1961|3425|4888|4239|1272|252|591|1182|1451|749|106|117|478|1331|1272|1990|2578|2943|3037|2595|1718|894|328|196|206|302|488|666|756|1150|1644|1599|964|1003|907|539|669|872|653|454|587|682|514|375|750|829|682|584|467|455|558|131|52|62|43|66|64|73|115|410|1718|1590|259|148|105|52|68|96|74|80|77|25|27|29|34|37|46|85|162|190|191|250|278|323|397|263|209|356|494|547|543|547|468|207|225|170|127|90|63|51|54|87|121|137|255|174|127|153|162|182|75|54|34|22|21|16|10|20|118</HistCounts>
+      </HistItem>
+    </Histograms>
+    <Metadata>
+      <MDI key="LAYER_TYPE">athematic</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
