@@ -20,17 +20,17 @@ count=0
 while count<fileCount:
     file_0 = pathsToImages[0]+disk[0][count]
     file_0_new = file_0+"_0.img"
-    commandText='gdal_translate -of HFA -b 1 '+ str(file_0) + " " + str(file_0_new)
+    commandText='gdal_translate -of HFA -b 1 '+ str(file_0) + " " + str(file_0_new) + " " + "-a_ullr 0 0 640 480"
     output = commands.getstatusoutput(commandText)
 
     file_1 = pathsToImages[1]+disk[1][count]
     file_1_new = file_1+"_1.img"
-    commandText='gdal_translate -of HFA -b 1 '+ str(file_1) + " " + str(file_1_new)
+    commandText='gdal_translate -of HFA -b 1 '+ str(file_1) + " " + str(file_1_new)+ " " + "-a_ullr -4 -12 636 468"
     output = commands.getstatusoutput(commandText)
 
     file_2 = pathsToImages[2]+disk[2][count]
     file_2_new = file_2 +"_2.img"
-    commandText='gdal_translate -of HFA -b 1 ' + str(file_2) + " " + str(file_2_new)
+    commandText='gdal_translate -of HFA -b 1 ' + str(file_2) + " " + str(file_2_new)+ " " + "-a_ullr -11 29 629 509"  #11 29 629 451"
     output = commands.getstatusoutput(commandText)
 
 

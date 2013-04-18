@@ -1,0 +1,35 @@
+<PAMDataset>
+  <Metadata>
+    <MDI key="EXIF_Make">SQ CO., LTD.  Rom: Ver 0000    </MDI>
+    <MDI key="EXIF_Model">SQ-606  SDK                    </MDI>
+    <MDI key="EXIF_Orientation">1</MDI>
+    <MDI key="EXIF_XResolution">(72)</MDI>
+    <MDI key="EXIF_YResolution">(72)</MDI>
+    <MDI key="EXIF_ResolutionUnit">2</MDI>
+    <MDI key="EXIF_DateTime">2013:04:17 12:29:14</MDI>
+    <MDI key="EXIF_YCbCrPositioning">2</MDI>
+    <MDI key="EXIF_ExposureTime">(0.058823)</MDI>
+    <MDI key="EXIF_FNumber">(2.8)</MDI>
+    <MDI key="EXIF_ISOSpeedRatings">50</MDI>
+    <MDI key="EXIF_ExifVersion">0210</MDI>
+    <MDI key="EXIF_DateTimeOriginal">2013:04:17 12:29:14</MDI>
+    <MDI key="EXIF_DateTimeDigitized">2013:04:17 12:29:14</MDI>
+    <MDI key="EXIF_ComponentsConfiguration">0x1 0x2 0x3 00</MDI>
+    <MDI key="EXIF_CompressedBitsPerPixel">(2)</MDI>
+    <MDI key="EXIF_MeteringMode">2</MDI>
+    <MDI key="EXIF_Flash">0</MDI>
+    <MDI key="EXIF_FlashpixVersion">0100</MDI>
+    <MDI key="EXIF_ColorSpace">1</MDI>
+    <MDI key="EXIF_PixelXDimension">640</MDI>
+    <MDI key="EXIF_PixelYDimension">480</MDI>
+    <MDI key="EXIF_FileSource">0x3</MDI>
+    <MDI key="EXIF_SceneType">0x1</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Description>Layer_1</Description>
+    <ColorInterp>Red</ColorInterp>
+    <Metadata>
+      <MDI key="LAYER_TYPE">athematic</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
