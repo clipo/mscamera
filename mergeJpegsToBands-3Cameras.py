@@ -9,7 +9,7 @@ def sorted_ls(path):
     return list(sorted(os.listdir(path), key=mtime))
     ##return list(sorted(glob(path+"*.JPG"),key=mtime))
 
-pathsToImages = ["./Camera_1/","./Camera_2/","./Camera_3/", "./Camera_4/"]
+pathsToImages = ["./Camera_1/","./Camera_2/","./Camera_3/"] ##, "./Camera_4/"]
 outputPath = "/merged_images/"
 
 disk = []
@@ -54,13 +54,13 @@ while count<fileCount:
     ##print commandText
     output = commands.getstatusoutput(commandText)
 
-    file_3 = pathsToImages[3]+disk[3][count]
-    file_3_new = file_3 +"_3.img"
-    commandText='gdal_translate -of HFA -b 1 ' + str(file_3) + " " + str(file_3_new) + " " + "-a_ullr 3 -2 643 478"  #11 29 629 451"
-    ##print commandText
-    output = commands.getstatusoutput(commandText)
+   ## file_3 = pathsToImages[3]+disk[3][count]
+   ## file_3_new = file_3 +"_3.img"
+   ## commandText='gdal_translate -of HFA -b 1 ' + str(file_3) + " " + str(file_3_new) + " " + "-a_ullr 3 -2 643 478"  #11 29 629 451"
+   ## ##print commandText
+   ## output = commands.getstatusoutput(commandText)
 
-    commandText = 'python ./gdal_merge.py -separate '+ file_3_new + " "+ file_2_new + " "+ file_1_new + " "+ file_0_new + " -of HFA -o ./output/output_" +str(count)+".img"
+    commandText = 'python ./gdal_merge.py -separate '+ file_0_new + " "+ file_1_new + " "+ file_2_new +  " -of HFA -o ./output/output_" +str(count)+".img" ##" "+ file_3_new +
     #print commandText
     output = commands.getstatusoutput(commandText)
 
