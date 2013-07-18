@@ -10,9 +10,12 @@ from datetime import datetime
 import sys         # needed to get command line parameter which is time delay in seconds
 import time        # nedeed to put program to sleep while waiting for next photo in low power
 
+## need to connect to the master computer via FTP.
+
 GPIO.setmode(GPIO.BCM)  # Set's GPIO pins to BCM GPIO numbering
 INPUT_PIN = 4           # Pin 4
 GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
+
 
 print "Running..."
 
@@ -20,7 +23,9 @@ def takeAPhoto(channel):
     ts=datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
-    call(["raspistill -o " + filename], shell=True) # call external program ro take a picture
+    call(["python pi_takePhoto.py -o " + filename], shell=True) # call external program ro take a picture
+    ## now trigger the ftp of the image to the master computer. may need to encapsulate this so that it can be a subprocess
+
 
 GPIO.add_event_detect(INPUT_PIN, GPIO.FALLING, callback=takeAPhoto(), bouncetime=200) # Wait for the input to go low, run the function when it does
 
