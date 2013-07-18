@@ -1,6 +1,7 @@
 __author__ = 'carllipo'
 
-
+from time import sleep  # Allows us to call the sleep function to slow down our loop
+import RPi.GPIO as GPIO # Allows us to call our GPIO pins and names it just GPIO
 import subprocess  # needed to run external program raspistill
 import datetime    # needed for timestamping outputfile
 
@@ -9,18 +10,24 @@ from datetime import datetime
 import sys         # needed to get command line parameter which is time delay in seconds
 import time        # nedeed to put program to sleep while waiting for next photo in low power
 
-lapse=sys.argv[1]  # get time delay between photos from command line
-print "Time lapse camera running with interval in seconds of"
-print lapse        # echo input to screen
-lapsef=float(lapse)# change from string to floating polint real for later
+GPIO.setmode(GPIO.BCM)  # Set's GPIO pins to BCM GPIO numbering
+INPUT_PIN = 4           # Pin 4
+GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
 
-loop=True          # loop for ever - stop with CTRL C
-while loop is True:
+print "Running..."
+
+def takeAPhoto(channel):
     ts=datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
-    print a                    # keep auidence amused
-    print "picture in 5 sec"
-    filename = "tl"+a+".jpg"   # give image file time-stamped name
+    filename = "P-"+a+".jpg"   # give image file time-stamped name
     call(["raspistill -o " + filename], shell=True) # call external program ro take a picture
-    print "done"
-    time.sleep(lapsef-6.0)     # 6 sec roughly time to take a picture
+
+GPIO.add_event_detect(INPUT_PIN, GPIO.FALLING, callback=takeAPhoto(), bouncetime=200) # Wait for the input to go low, run the function when it does
+
+# Create a function to run when the input is high
+
+# Start a loop that never ends
+while True:
+    # basically do nothing but wait for the pin to go HIGH
+
+
