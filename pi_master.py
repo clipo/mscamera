@@ -4,6 +4,11 @@ import gps
 import RPi.GPIO as GPIO # Allows us to call our GPIO pins and names it just GPIO
 import datetime    # needed for timestamping outputfile
 import math
+import csv
+import datetime
+from subprocess import call
+import sys         # needed to get command line parameter which is time delay in seconds
+import time        # nedeed to put program to sleep while waiting for next photo in low power
 
 ## this program will send the trigger for the multiple cameras (via pin 4)
 ## The trigger will be distance based using the GPS (ultimate GPS)
@@ -12,6 +17,13 @@ import math
 ## and will bring them locally to assemble them into a GDAL, IMG file (multiband) (py_makeMultiSpectral.py)
 ## and then will trigger the creation of an NDVI (NDVI.py)
 
+ts=datetime.now()
+a=ts.strftime("%j%H%M%S")+"-log.csv"
+## log file
+log = open(a, 'wb')
+writer = csv.writer(log)
+values= ["Time","Northing","Easting","Zone","Latitude", "Longitude", "Altitude", "Speed"]
+writer.writerows(values)
 # Listen on port 2947 (gpsd) of localhost
 session = gps.gps("localhost", "2947")
 session.stream(gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
@@ -19,6 +31,12 @@ session.stream(gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
 OUTPUT_PIN = 4
 
 GPIO.setup(OUTPUT_PIN, GPIO.OUT)
+
+# minimum distance between shots (meters)
+distanceForNewPhoto=30
+
+# minimum time between shots  (seconds)
+minTime = 30
 
 ## some constants for the gps conversion
 equatorial_radius = 6373137
@@ -38,6 +56,15 @@ C0 = 16.8326133343344000000
 D0 = 0.0219844042737573000
 E0 = 0.0003127052179504480
 Sin1 = 0.0000048481368110954
+oldEasting = 0
+oldNorthing = 0
+oldZone =0
+altitude =0
+currentEasting=0
+currentNorthing=0
+currentZone=0
+altitude=0
+speed=0
 
 
 ######
@@ -70,27 +97,96 @@ def latLongToUTM(latitude, longitude):
     zone = longZone
     return northing, easting, zone
 
-while True:
-    try:
-        report = session.next()
-        # Wait for a 'TPV' report and display the current time
-        # To see all report data, uncomment the line below
-        # print report
-        if report['class'] == 'TPV':
-            if hasattr(report, 'time'):
-                time = report.time
-            if hasattr(report, 'latitude'):
-                latitude = report.latitude
-            if hasattr(report, 'longitude'):
-                longitude = report.longitude
-            if hasattr(report,'altitude'):
-                altitude=report.altitude
-            if hasattr(report,'speed'):
-                speed=report.speed
-    except KeyError:
-        pass
-    except KeyboardInterrupt:
-        quit()
-    except StopIteration:
-        session = None
-        print "GPSD has terminated"
+def distanceBetweenPoints(n1, e1, n2, e2):
+    distance = math.sqrt((n1-n2)^2 + (e1-e2)^2)
+    return distance
+
+def takeAPhoto(channel):
+    ts=datetime.now()          # get time step
+    a= ts.strftime("%j%H%M%S")
+    filename = "P-"+a+".jpg"   # give image file time-stamped name
+    call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
+    ## now trigger the ftp of the image to the master computer. may need to encapsulate this so that it can be a subprocess
+
+
+def setup():
+    wait=0
+    ## first get initial location ... wait until you get a report
+    while wait==0:
+        try:
+            report = session.next()
+            if report['class'] == 'TPV':
+                if hasattr(report, 'time'):
+                    time = report.time
+                if hasattr(report, 'latitude'):
+                    latitude = report.latitude
+                if hasattr(report, 'longitude'):
+                    longitude = report.longitude
+                if hasattr(report,'altitude'):
+                    altitude=report.altitude
+                if hasattr(report,'speed'):
+                    speed=report.speed
+                oldNorthing, oldEasting, oldZone = latLongToUTM(latitude,longitude)
+                currentNorthing = oldNorthing
+                currentEasting = oldNorthing
+                currentZone=oldZone
+                currentAltitude=altitude
+                currentTime = datetime.today()
+                oldTime=currentTime
+                wait = 1 ## break if we get values...
+        except KeyError:
+            pass
+        except KeyboardInterrupt:
+            quit()
+        except StopIteration:
+            session = None
+            print "GPSD has terminated"
+
+def main():
+    ## Now begin main loop. Keep doing this forever
+    while True:
+        try:
+            report = session.next()
+            # Wait for a 'TPV' report and display the current time
+            # To see all report data, uncomment the line below
+            # print report
+
+            if report['class'] == 'TPV':
+                if hasattr(report, 'time'):
+                    time = report.time
+                if hasattr(report, 'latitude'):
+                    latitude = report.latitude
+                if hasattr(report, 'longitude'):
+                    longitude = report.longitude
+                if hasattr(report,'altitude'):
+                    altitude=report.altitude
+                if hasattr(report,'speed'):
+                    speed=report.speed
+                currentNorthing, currentEasting, currentZone = latLongToUTM(latitude,longitude)
+                currentDistance = distanceBetweenPoints(currentNorthing, oldNorthing, currentEasting, oldEasting)
+
+                currentTime = datetime.today()
+                diffTime = currentTime-oldTime
+
+                if currentDistance > distanceForNewPhoto or diffTime.total_seconds()>minTime:
+                    ### tell everyone to take the photo!
+                    GPIO.output(4, True)
+                    ### now set oldpoints to the current location
+                    oldNorthing = currentNorthing
+                    oldEasting = currentEasting
+                    oldZone = currentZone
+                    values= [time,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed]
+                    writer.writerows(values)
+                    GPIO.output(4,False)
+
+        except KeyError:
+            pass
+        except KeyboardInterrupt:
+            quit()
+        except StopIteration:
+            session = None
+            print "GPSD has terminated"
+
+if __name__ == "__main__":
+    setup()
+    main()

@@ -23,7 +23,7 @@ def takeAPhoto(channel):
     ts=datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
-    call(["python pi_takePhoto.py -o " + filename], shell=True) # call external program ro take a picture
+    call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
     ## now trigger the ftp of the image to the master computer. may need to encapsulate this so that it can be a subprocess
 
 
