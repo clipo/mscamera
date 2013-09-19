@@ -17,7 +17,8 @@ import time        # nedeed to put program to sleep while waiting for next photo
 ## and will bring them locally to assemble them into a GDAL, IMG file (multiband) (py_makeMultiSpectral.py)
 ## and then will trigger the creation of an NDVI (NDVI.py)
 
-ts=datetime.now()
+ts=datetime.datetime.now()
+oldTime=ts
 a=ts.strftime("%j%H%M%S")+"-log.csv"
 ## log file
 log = open(a, 'wb')
@@ -102,7 +103,7 @@ def distanceBetweenPoints(n1, e1, n2, e2):
     return distance
 
 def takeAPhoto(channel):
-    ts=datetime.now()          # get time step
+    ts=datetime.datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
     call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
@@ -131,7 +132,7 @@ def setup():
                 currentEasting = oldNorthing
                 currentZone=oldZone
                 currentAltitude=altitude
-                currentTime = datetime.today()
+                currentTime = datetime.datetime.now()
                 oldTime=currentTime
                 wait = 1 ## break if we get values...
         except KeyError:
@@ -165,7 +166,7 @@ def main():
                 currentNorthing, currentEasting, currentZone = latLongToUTM(latitude,longitude)
                 currentDistance = distanceBetweenPoints(currentNorthing, oldNorthing, currentEasting, oldEasting)
 
-                currentTime = datetime.today()
+                currentTime = datetime.datetime.now()
                 diffTime = currentTime-oldTime
 
                 if currentDistance > distanceForNewPhoto or diffTime.total_seconds()>minTime:
