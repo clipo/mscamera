@@ -1,7 +1,11 @@
 __author__ = 'carllipo'
 
 import gps
-import RPi.GPIO as GPIO # Allows us to call our GPIO pins and names it just GPIO
+try:
+    import RPi.GPIO as GPIO
+except RuntimeError:
+    print("Error importing RPi.GPIO!  This is probably because you need superuser privileges.  You can achieve this by using 'sudo' to run your script")
+
 import datetime    # needed for timestamping outputfile
 import math
 import csv
@@ -29,8 +33,8 @@ writer.writerows(values)
 session = gps.gps("localhost", "2947")
 session.stream(gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
 
-OUTPUT_PIN = 4
-
+OUTPUT_PIN =5 
+GPIO.setmode(GPIO.BOARD)
 GPIO.setup(OUTPUT_PIN, GPIO.OUT)
 
 # minimum distance between shots (meters)
