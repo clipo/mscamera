@@ -29,9 +29,6 @@ log = open(a, 'wb')
 writer = csv.writer(log)
 values= ["Time","Northing","Easting","Zone","Latitude", "Longitude", "Altitude", "Speed"]
 writer.writerows(values)
-# Listen on port 2947 (gpsd) of localhost
-session = gps.gps("localhost", "2947")
-session.stream(gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
 
 OUTPUT_PIN =5 
 GPIO.setmode(GPIO.BOARD)
@@ -115,6 +112,9 @@ def takeAPhoto(channel):
 
 
 def setup():
+    # Listen on port 2947 (gpsd) of localhost
+    session = gps.gps("localhost", "2947")
+    session.stream(gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
     wait=0
     ## first get initial location ... wait until you get a report
     while wait==0:
@@ -148,7 +148,11 @@ def setup():
             print "GPSD has terminated"
 
 def main():
+    setup()
     ## Now begin main loop. Keep doing this forever
+    # Listen on port 2947 (gpsd) of localhost
+    session = gps.gps("localhost", "2947")
+    session.stream(gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
     while True:
         try:
             report = session.next()
@@ -193,5 +197,5 @@ def main():
             print "GPSD has terminated"
 
 if __name__ == "__main__":
-    setup()
+
     main()
