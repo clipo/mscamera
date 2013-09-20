@@ -30,7 +30,7 @@ writer = csv.writer(log)
 values= ["Time","Northing","Easting","Zone","Latitude", "Longitude", "Altitude", "Speed"]
 writer.writerows(values)
 
-OUTPUT_PIN =5 
+OUTPUT_PIN=7
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(OUTPUT_PIN, GPIO.OUT)
 
@@ -116,39 +116,41 @@ def setup():
     session = gps.gps("localhost", "2947")
     session.stream(gps.WATCH_ENABLE | gps.WATCH_NEWSTYLE)
     wait=0
+    tryAttempt=0
     ## first get initial location ... wait until you get a report
-    while wait==0:
-        try:
-            report = session.next()
-            if report['class'] == 'TPV':
-                if hasattr(report, 'time'):
-                    time = report.time
-                if hasattr(report, 'latitude'):
-                    latitude = report.latitude
-                if hasattr(report, 'longitude'):
-                    longitude = report.longitude
-                if hasattr(report,'altitude'):
-                    altitude=report.altitude
-                if hasattr(report,'speed'):
-                    speed=report.speed
-                oldNorthing, oldEasting, oldZone = latLongToUTM(latitude,longitude)
-                currentNorthing = oldNorthing
-                currentEasting = oldNorthing
-                currentZone=oldZone
-                currentAltitude=altitude
-                currentTime = datetime.datetime.now()
-                oldTime=currentTime
-                wait = 1 ## break if we get values...
-        except KeyError:
-            pass
-        except KeyboardInterrupt:
-            quit()
-        except StopIteration:
-            session = None
-            print "GPSD has terminated"
+    try:
+        report = session.next()
+        if report['class'] == 'TPV':
+            if hasattr(report, 'time'):
+                time = report.time
+            if hasattr(report, 'latitude'):
+                latitude = report.latitude
+            if hasattr(report, 'longitude'):
+                longitude = report.longitude
+            if hasattr(report,'altitude'):
+                altitude=report.altitude
+            if hasattr(report,'speed'):
+                speed=report.speed
+            oldNorthing, oldEasting, oldZone = latLongToUTM(latitude,longitude)
+            currentNorthing = oldNorthing
+            currentEasting = oldNorthing
+            currentZone=oldZone
+            currentAltitude=altitude
+            currentTime = datetime.datetime.now()
+            oldTime=currentTime
+            wait = 1 ## break if we get values...
+    except KeyError:
+      pass
+    except KeyboardInterrupt:
+      quit()
+    except StopIteration:
+      session = None
+      print "GPSD has terminated"
 
 def main():
+    print ("Setup...")
     setup()
+    print ("Setup complete... now starting loop.") 
     ## Now begin main loop. Keep doing this forever
     # Listen on port 2947 (gpsd) of localhost
     session = gps.gps("localhost", "2947")
@@ -179,7 +181,7 @@ def main():
 
                 if currentDistance > distanceForNewPhoto or diffTime.total_seconds()>minTime:
                     ### tell everyone to take the photo!
-                    GPIO.output(4, True)
+                    GPIO.output(OUTPUT_PIN, True)
                     ### now set oldpoints to the current location
                     oldNorthing = currentNorthing
                     oldEasting = currentEasting
