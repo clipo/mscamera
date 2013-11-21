@@ -13,6 +13,7 @@ import datetime
 from subprocess import call
 import sys         # needed to get command line parameter which is time delay in seconds
 import time        # nedeed to put program to sleep while waiting for next photo in low power
+import picamera
 
 ## this program will send the trigger for the multiple cameras (via pin 4)
 ## The trigger will be distance based using the GPS (ultimate GPS)
@@ -147,6 +148,16 @@ def setup():
       session = None
       print "GPSD has terminated"
 
+def takePicture():
+    ts=datetime.datetime.now()          # get time step
+    a= ts.strftime("%j%H%M%S")
+    filename = "P-"+a+".jpg"   # give image file time-stamped name
+    with picamera.PiCamera() as camera:
+        camera.resolution = (1024, 768)
+        camera.start_preview()
+        time.sleep(1)
+        camera.capture(filename, 'raw')
+
 def main():
     print ("Setup...")
     setup()
@@ -191,13 +202,13 @@ def main():
 
                 if currentDistance > distanceForNewPhoto or diffTime.total_seconds()>minTime:
                     ### tell everyone to take the photo!
+                    takePicture()
                     GPIO.output(OUTPUT_PIN, True)
                     ### now set oldpoints to the current location
                     oldNorthing = currentNorthing
                     oldEasting = currentEasting
                     oldZone = currentZone
-                    values= [time,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed]
-                    writer.writerows(values)
+                    writer.writerows([time,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
                     GPIO.output(4,False)
 
         except KeyError:
@@ -207,6 +218,8 @@ def main():
         except StopIteration:
             session = None
             print "GPSD has terminated.."
+
+
 
 if __name__ == "__main__":
 
