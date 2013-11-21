@@ -100,7 +100,7 @@ def latLongToUTM(latitude, longitude):
     return northing, easting, zone
 
 def distanceBetweenPoints(n1, e1, n2, e2):
-    distance = math.sqrt((n1-n2)^2 + (e1-e2)^2)
+    distance = math.sqrt((n1-n2)**2 + (e1-e2)**2)
     return distance
 
 def takeAPhoto(channel):
