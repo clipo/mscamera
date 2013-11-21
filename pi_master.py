@@ -163,7 +163,10 @@ def main():
     oldEasting=0.0
     currentEasting=0.0
     currentNorthing=0.0
-
+    currentZone=0
+    altitude=0.0
+    speed=0.0
+    time=0
     while True:
         try:
             report = session.next()
