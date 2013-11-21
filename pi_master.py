@@ -161,7 +161,8 @@ def main():
             # Wait for a 'TPV' report and display the current time
             # To see all report data, uncomment the line below
             # print report
-
+            latitude=0.0
+            longitude=0.0
             if report['class'] == 'TPV':
                 if hasattr(report, 'time'):
                     time = report.time
@@ -175,7 +176,6 @@ def main():
                     speed=report.speed
                 currentNorthing, currentEasting, currentZone = latLongToUTM(latitude,longitude)
                 currentDistance = distanceBetweenPoints(currentNorthing, oldNorthing, currentEasting, oldEasting)
-
                 currentTime = datetime.datetime.now()
                 diffTime = currentTime-oldTime
 
@@ -196,7 +196,7 @@ def main():
             quit()
         except StopIteration:
             session = None
-            print "GPSD has terminated"
+            print "GPSD has terminated.."
 
 if __name__ == "__main__":
 
