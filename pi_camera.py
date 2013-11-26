@@ -41,9 +41,9 @@ def takeAPhoto(channel):
 GPIO.add_event_detect(INPUT_PIN, GPIO.FALLING, callback=takePicture(), bouncetime=200) # Wait for the input to go low, run the function when it does
 
 # Create a function to run when the input is high
-
+wait=0
 # Start a loop that never ends
 while True:
     # basically do nothing but wait for the pin to go HIGH
-
-
+    # do nothing.
+    wait += 1
