@@ -6,7 +6,7 @@ import subprocess  # needed to run external program raspistill
 import datetime    # needed for timestamping outputfile
 
 from subprocess import call
-from datetime import datetime
+import datetime
 import sys         # needed to get command line parameter which is time delay in seconds
 import time        # nedeed to put program to sleep while waiting for next photo in low power
 import picamera
