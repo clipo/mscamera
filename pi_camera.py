@@ -30,13 +30,17 @@ def takePicture():
         time.sleep(1)
         camera.capture(filename, 'raw')
 
-def takeAPhoto(channel):
+def takeAPhoto():
     ts=datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
-    call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
+    #call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
     ## now trigger the ftp of the image to the master computer. may need to encapsulate this so that it can be a subprocess
-
+    with picamera.PiCamera() as camera:
+        camera.resolution = (1024, 768)
+        camera.start_preview()
+        time.sleep(1)
+        camera.capture(filename, 'raw')
 
 GPIO.add_event_detect(INPUT_PIN, GPIO.FALLING, callback=takePicture(), bouncetime=200)
         # Wait for the input to go high, run the function when it does
