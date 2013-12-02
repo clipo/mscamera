@@ -38,7 +38,8 @@ def takeAPhoto(channel):
     ## now trigger the ftp of the image to the master computer. may need to encapsulate this so that it can be a subprocess
 
 
-GPIO.add_event_detect(INPUT_PIN, GPIO.FALLING, callback=takePicture(), bouncetime=200) # Wait for the input to go low, run the function when it does
+GPIO.add_event_detect(INPUT_PIN, GPIO.FALLING, callback=takePicture(), bouncetime=200)
+        # Wait for the input to go high, run the function when it does
 
 # Create a function to run when the input is high
 wait=0
