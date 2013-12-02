@@ -184,7 +184,7 @@ def main():
     currentZone=0
     altitude=0.0
     speed=0.0
-    time=0
+    cTime=0
     oldTime = datetime.datetime.now()
     while True:
         time.sleep(1)
@@ -198,7 +198,7 @@ def main():
             # print report
             if report['class'] == 'TPV':
                 if hasattr(report, 'time'):
-                    time = report.time
+                    cTime = report.time
                 if hasattr(report, 'latitude'):
                     latitude = report.latitude
                 if hasattr(report, 'longitude'):
@@ -226,7 +226,7 @@ def main():
             oldNorthing = currentNorthing
             oldEasting = currentEasting
             oldZone = currentZone
-            writer.writerows([time,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
+            writer.writerows([cTime,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
             GPIO.output(4,False)
             ts=datetime.datetime.now()
             oldTime=ts

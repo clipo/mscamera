@@ -67,7 +67,7 @@
       <file leaf-file-name="pi_master.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="191" column="48" selection-start="6744" selection-end="6744" vertical-scroll-proportion="0.26717559" vertical-offset="2690" max-vertical-offset="3630">
+            <state line="226" column="39" selection-start="8253" selection-end="8253" vertical-scroll-proportion="2.8124006" vertical-offset="1621" max-vertical-offset="3645">
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -501,7 +501,19 @@
       <created>1386027358342</created>
       <updated>1386027358342</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="fixing basic code">
+      <created>1386027463811</created>
+      <updated>1386027463811</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fixing basic code">
+      <created>1386027510339</created>
+      <updated>1386027510339</updated>
+    </task>
+    <task id="LOCAL-00029" summary="fixing basic code">
+      <created>1386027559848</created>
+      <updated>1386027559848</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -646,7 +658,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_master.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="191" column="48" selection-start="6744" selection-end="6744" vertical-scroll-proportion="0.26717559" vertical-offset="2690" max-vertical-offset="3630">
+        <state line="226" column="39" selection-start="8253" selection-end="8253" vertical-scroll-proportion="2.8124006" vertical-offset="1621" max-vertical-offset="3645">
           <folding>
             <element signature="e#24#51#0" expanded="true" />
           </folding>
