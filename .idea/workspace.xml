@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fc34ea2-c8b2-416b-9d1b-a32b3de342a8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NDVI.py" afterPath="$PROJECT_DIR$/NDVI.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/RaspberryPi/master.gz" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi_camera.py" afterPath="$PROJECT_DIR$/pi_camera.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mscamera.iws" />
@@ -26,21 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pi_camera.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="660">
+            <state line="27" column="35" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.24427481" vertical-offset="245" max-vertical-offset="930">
               <folding>
-                <marker date="1374184020000" expanded="true" signature="814:1189" placeholder="..." />
+                <element signature="e#25#109#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NDVI.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="NDVI.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NDVI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="27" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.47894222" vertical-offset="201" max-vertical-offset="1245">
+            <state line="46" column="27" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.0" vertical-offset="201" max-vertical-offset="1245">
               <folding />
             </state>
           </provider>
@@ -58,7 +59,7 @@
       <file leaf-file-name="py_takePhoto.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/py_takePhoto.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="21" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="345">
+            <state line="17" column="21" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
@@ -67,8 +68,10 @@
       <file leaf-file-name="pi_master.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pi_master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="92" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="645">
-              <folding />
+            <state line="218" column="25" selection-start="7931" selection-end="7931" vertical-scroll-proportion="0.0" vertical-offset="2780" max-vertical-offset="3585">
+              <folding>
+                <element signature="e#24#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +88,16 @@
       <file leaf-file-name="pi_makeMultiSpectral.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pi_makeMultiSpectral.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="64" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1395">
+            <state line="13" column="64" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pi_takePhoto.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pi_takePhoto.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
@@ -94,16 +106,7 @@
       <file leaf-file-name="createNDVI.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/createNDVI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="63" selection-start="2846" selection-end="2846" vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1050">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="64" column="63" selection-start="2846" selection-end="2846" vertical-scroll-proportion="0.0" vertical-offset="367" max-vertical-offset="1035">
               <folding />
             </state>
           </provider>
@@ -141,16 +144,17 @@
         <option value="$PROJECT_DIR$/merge.py" />
         <option value="$PROJECT_DIR$/createNDVI.py" />
         <option value="$PROJECT_DIR$/pi_makeMultiSpectral.py" />
-        <option value="$PROJECT_DIR$/pi_master.py" />
-        <option value="$PROJECT_DIR$/pi_camera.py" />
         <option value="$PROJECT_DIR$/py_takePhoto.py" />
         <option value="$PROJECT_DIR$/NDVI.py" />
+        <option value="$PROJECT_DIR$/pi_takePhoto.py" />
+        <option value="$PROJECT_DIR$/pi_master.py" />
+        <option value="$PROJECT_DIR$/pi_camera.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="536" />
-    <option name="y" value="109" />
+    <option name="x" value="1074" />
+    <option name="y" value="128" />
     <option name="width" value="1375" />
     <option name="height" value="1167" />
   </component>
@@ -180,7 +184,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,26 +204,69 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Seriation" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <PyConsoleSettings />
     </option>
-    <option name="myDjangoConsoleState">
-      <PyConsoleSettings />
-    </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mscamera" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mscamera" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,7 +306,53 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mscamera" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mscamera" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -326,29 +418,101 @@
       <created>1374184537756</created>
       <updated>1374184537756</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added various additional scripts for slave and master camera boards&#10;">
+      <created>1384994440950</created>
+      <updated>1384994440950</updated>
+    </task>
+    <task id="LOCAL-00007" summary="fixing basic code">
+      <created>1384994559242</created>
+      <updated>1384994559242</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fixing basic code">
+      <created>1384994660664</created>
+      <updated>1384994660664</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixing basic code">
+      <created>1384994705861</created>
+      <updated>1384994705861</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fixing basic code">
+      <created>1384994789173</created>
+      <updated>1384994789173</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixing basic code">
+      <created>1384995909446</created>
+      <updated>1384995909446</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fixing basic code">
+      <created>1385425261203</created>
+      <updated>1385425261203</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fixing basic code">
+      <created>1385426467699</created>
+      <updated>1385426467699</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fixing basic code">
+      <created>1386024426195</created>
+      <updated>1386024426195</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fixing basic code">
+      <created>1386025262986</created>
+      <updated>1386025262987</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fixing basic code">
+      <created>1386026028677</created>
+      <updated>1386026028677</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fixing basic code">
+      <created>1386026083587</created>
+      <updated>1386026083587</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fixing basic code">
+      <created>1386026245315</created>
+      <updated>1386026245315</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fixing basic code">
+      <created>1386026562878</created>
+      <updated>1386026562878</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fixing basic code">
+      <created>1386026835574</created>
+      <updated>1386026835574</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fixing basic code">
+      <created>1386026875473</created>
+      <updated>1386026875473</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fixing basic code">
+      <created>1386026942044</created>
+      <updated>1386026942044</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fixing basic code">
+      <created>1386027137880</created>
+      <updated>1386027137880</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="536" y="109" width="1375" height="1167" extended-state="0" />
-    <editor active="false" />
+    <frame x="1074" y="128" width="1375" height="1167" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26763636" sideWeight="0.9971347" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26763636" sideWeight="0.67070895" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32929105" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -365,17 +529,13 @@
     <MESSAGE value="added pi version of photo taker" />
     <MESSAGE value="now listens to pin #4 and takes photo when pin is high..." />
     <MESSAGE value="added various additional scripts for slave and master camera boards&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added various additional scripts for slave and master camera boards&#10;" />
+    <MESSAGE value="fixing basic code" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing basic code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/merge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mscamera.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="24" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -408,47 +568,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createNDVI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="63" selection-start="2846" selection-end="2846" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mergeJpegsToBands.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="7" selection-start="0" selection-end="2657" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1305">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pi_master.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="92" selection-start="408" selection-end="408" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py_takePhoto.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="21" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pi_makeMultiSpectral.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="64" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pi_camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
-          <folding>
-            <marker date="1374184020000" expanded="true" signature="814:1189" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -468,8 +591,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NDVI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="27" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.47894222" vertical-offset="201" max-vertical-offset="1245">
+        <state line="46" column="27" selection-start="1667" selection-end="1667" vertical-scroll-proportion="0.0" vertical-offset="201" max-vertical-offset="1245">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pi_makeMultiSpectral.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="64" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py_takePhoto.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="21" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createNDVI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="63" selection-start="2846" selection-end="2846" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pi_takePhoto.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pi_master.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="25" selection-start="7931" selection-end="7931" vertical-scroll-proportion="0.0" vertical-offset="2780" max-vertical-offset="3585">
+          <folding>
+            <element signature="e#24#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pi_camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="35" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.24427481" vertical-offset="245" max-vertical-offset="930">
+          <folding>
+            <element signature="e#25#109#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

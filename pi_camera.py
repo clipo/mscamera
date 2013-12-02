@@ -21,9 +21,11 @@ GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
 print "Running..."
 
 def takePicture(INPUT_PIN):
+
     ts=datetime.datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
+    print "Taking a picture: %s " % filename
     with picamera.PiCamera() as camera:
         camera.resolution = (1024, 768)
         camera.start_preview()
