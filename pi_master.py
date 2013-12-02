@@ -185,6 +185,8 @@ def main():
     speed=0.0
     time=0
     while True:
+        currentTime = datetime.datetime.now()
+        diffTime = currentTime-oldTime
         try:
             report = session.next()
             # Wait for a 'TPV' report and display the current time
@@ -203,20 +205,6 @@ def main():
                     speed=report.speed
                 currentNorthing, currentEasting, currentZone = latLongToUTM(latitude,longitude)
                 currentDistance = distanceBetweenPoints(currentNorthing, oldNorthing, currentEasting, oldEasting)
-                currentTime = datetime.datetime.now()
-                diffTime = currentTime-oldTime
-
-                if currentDistance > distanceForNewPhoto or diffTime.total_seconds()>minTime:
-                    ### tell everyone to take the photo!
-                    takePicture()
-                    GPIO.output(OUTPUT_PIN, True)
-                    ### now set oldpoints to the current location
-                    oldNorthing = currentNorthing
-                    oldEasting = currentEasting
-                    oldZone = currentZone
-                    writer.writerows([time,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
-                    GPIO.output(4,False)
-
         except KeyError:
             pass
         except KeyboardInterrupt:
@@ -224,6 +212,20 @@ def main():
         except StopIteration:
             session = None
             print "GPSD has terminated.."
+
+        if currentDistance > distanceForNewPhoto or diffTime.total_seconds()>minTime:
+            print "take a photo!"
+            ### tell everyone to take the photo!
+            takePicture()
+            GPIO.output(OUTPUT_PIN, True)
+            ### now set oldpoints to the current location
+            oldNorthing = currentNorthing
+            oldEasting = currentEasting
+            oldZone = currentZone
+            writer.writerows([time,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
+            GPIO.output(4,False)
+            ts=datetime.datetime.now()
+            oldTime=ts
 
 
 if __name__ == "__main__":
