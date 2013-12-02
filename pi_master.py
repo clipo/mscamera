@@ -6,6 +6,12 @@ try:
 except RuntimeError:
     print("Error importing RPi.GPIO!  This is probably because you need superuser privileges.  You can achieve this by using 'sudo' to run your script")
 
+try:
+    call(["sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock"])
+except RuntimeError:
+    print ("Cannot get the gps process to run. try: sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock" )
+    sys.exit("quitting.")
+
 import datetime    # needed for timestamping outputfile
 import math
 import csv
