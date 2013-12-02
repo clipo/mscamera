@@ -209,13 +209,17 @@ def main():
                     speed=report.speed
                 currentNorthing, currentEasting, currentZone = latLongToUTM(latitude,longitude)
                 currentDistance = distanceBetweenPoints(currentNorthing, oldNorthing, currentEasting, oldEasting)
-        except KeyError:
-            pass
-        except KeyboardInterrupt:
-            quit()
-        except StopIteration:
-            session = None
-            print "GPSD has terminated.."
+        #except KeyError:
+        #    pass
+        #except KeyboardInterrupt:
+        #    quit()
+        #except StopIteration:
+        #    session = None
+        #    print "GPSD has terminated.."
+
+        except RuntimeError:
+            print "There has been a problem. Error with GPS."
+
 
         if currentDistance > distanceForNewPhoto or diffTime.total_seconds() > minTime:
             print "take a photo!"
