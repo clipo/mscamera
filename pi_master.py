@@ -39,7 +39,7 @@ GPIO.setup(OUTPUT_PIN, GPIO.OUT)
 distanceForNewPhoto=30
 
 # minimum time between shots  (seconds)
-minTime = 30
+minTime = 15
 
 ## some constants for the gps conversion
 equatorial_radius = 6373137
@@ -218,7 +218,6 @@ def main():
         except StopIteration:
             session = None
             print "GPSD has terminated.."
-
 
 
 if __name__ == "__main__":
