@@ -191,6 +191,7 @@ def main():
         currentTime = datetime.datetime.now()
         diffTime = currentTime-oldTime
         print "Current diffTime:  " , str(diffTime)
+        '''
         try:
             report = session.next()
             # Wait for a 'TPV' report and display the current time
@@ -219,7 +220,7 @@ def main():
 
         except RuntimeError:
             print "There has been a problem. Error with GPS."
-
+        '''
 
         if currentDistance > distanceForNewPhoto or diffTime.total_seconds() > minTime:
             print "take a photo!"
