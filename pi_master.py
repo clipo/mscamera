@@ -184,6 +184,7 @@ def main():
     altitude=0.0
     speed=0.0
     time=0
+    oldTime = datetime.datetime.now()
     while True:
         currentTime = datetime.datetime.now()
         diffTime = currentTime-oldTime
