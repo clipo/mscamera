@@ -20,7 +20,7 @@ GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
 
 print "Running..."
 
-def takePicture():
+def takePicture(INPUT_PIN):
     ts=datetime.datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
@@ -42,8 +42,8 @@ def takeAPhoto():
         time.sleep(1)
         camera.capture(filename, 'raw')
 
-GPIO.add_event_detect(INPUT_PIN, GPIO.FALLING)
-GPIO.add_event_callback(INPUT_PIN, takePicture)
+GPIO.add_event_detect(INPUT_PIN, GPIO.RISING)
+GPIO.add_event_callback(INPUT_PIN, takePicture,bouncetime=200)
         # Wait for the input to go high, run the function when it does
 
 # Create a function to run when the input is high
