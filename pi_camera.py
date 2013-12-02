@@ -42,7 +42,8 @@ def takeAPhoto():
         time.sleep(1)
         camera.capture(filename, 'raw')
 
-GPIO.add_event_detect(INPUT_PIN, GPIO.FALLING, callback=takePicture(), bouncetime=200)
+GPIO.add_event_detect(INPUT_PIN, GPIO.FALLING)
+GPIO.add_event_callback(INPUT_PIN, takePicture, bouncetime=200)
         # Wait for the input to go high, run the function when it does
 
 # Create a function to run when the input is high
