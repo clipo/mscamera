@@ -189,6 +189,7 @@ def main():
     while True:
         currentTime = datetime.datetime.now()
         diffTime = currentTime-oldTime
+        print "Current diffTime: %d " % diffTime
         try:
             report = session.next()
             # Wait for a 'TPV' report and display the current time
@@ -215,7 +216,7 @@ def main():
             session = None
             print "GPSD has terminated.."
 
-        if currentDistance > distanceForNewPhoto or diffTime.total_seconds()>minTime:
+        if currentDistance > distanceForNewPhoto or diffTime.total_seconds() > minTime:
             print "take a photo!"
             ### tell everyone to take the photo!
             takePicture()
