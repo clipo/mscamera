@@ -1,5 +1,5 @@
 __author__ = 'carllipo'
-
+from subprocess import call
 import gps
 try:
     import RPi.GPIO as GPIO
@@ -16,7 +16,7 @@ import datetime    # needed for timestamping outputfile
 import math
 import csv
 import datetime
-from subprocess import call
+
 import sys         # needed to get command line parameter which is time delay in seconds
 import time        # nedeed to put program to sleep while waiting for next photo in low power
 import picamera
