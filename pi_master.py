@@ -189,7 +189,7 @@ def main():
     while True:
         currentTime = datetime.datetime.now()
         diffTime = currentTime-oldTime
-        print "Current diffTime: %d " % diffTime
+        print "Current diffTime:  " , str(diffTime)
         try:
             report = session.next()
             # Wait for a 'TPV' report and display the current time
