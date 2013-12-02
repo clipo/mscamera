@@ -187,6 +187,7 @@ def main():
     time=0
     oldTime = datetime.datetime.now()
     while True:
+        time.sleep(1)
         currentTime = datetime.datetime.now()
         diffTime = currentTime-oldTime
         print "Current diffTime:  " , str(diffTime)
