@@ -225,16 +225,15 @@ def main():
         if currentDistance > distanceForNewPhoto or diffTime.total_seconds() > minTime:
             print "take a photo!"
             ### tell everyone to take the photo!
-            #takePicture()
+            takePicture()
             GPIO.output(OUTPUT_PIN, True)
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
             oldZone = currentZone
-
             cTime=currentNorthing=currentEasting=currentZone=latitude=longitude=altitude=speed=0.0
             writer.writerow([cTime,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
-            GPIO.output(4,False)
+            GPIO.output(OUTPUT_PIN,False)
             ts=datetime.datetime.now()
             oldTime=ts
 
