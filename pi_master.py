@@ -40,7 +40,7 @@ writer.writerows(values)
 distanceForNewPhoto=30
 
 # minimum time between shots  (seconds)
-minTime = 15
+minTime = 5
 
 ## some constants for the gps conversion
 equatorial_radius = 6373137
