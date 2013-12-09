@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fc34ea2-c8b2-416b-9d1b-a32b3de342a8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi_camera.py" afterPath="$PROJECT_DIR$/pi_camera.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi_master.py" afterPath="$PROJECT_DIR$/pi_master.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mscamera.iws" />
@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pi_camera.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.79389316" vertical-offset="185" max-vertical-offset="855">
+            <state line="32" column="66" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="810">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
@@ -64,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pi_master.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pi_master.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="225" column="35" selection-start="8006" selection-end="8006" vertical-scroll-proportion="-8.038462" vertical-offset="3166" max-vertical-offset="3825">
+            <state line="222" column="33" selection-start="7895" selection-end="7895" vertical-scroll-proportion="0.2607313" vertical-offset="3166" max-vertical-offset="3855">
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -146,14 +146,14 @@
         <option value="$PROJECT_DIR$/py_takePhoto.py" />
         <option value="$PROJECT_DIR$/NDVI.py" />
         <option value="$PROJECT_DIR$/pi_takePhoto.py" />
-        <option value="$PROJECT_DIR$/pi_master.py" />
         <option value="$PROJECT_DIR$/pi_camera.py" />
+        <option value="$PROJECT_DIR$/pi_master.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
-    <option name="y" value="139" />
+    <option name="x" value="108" />
+    <option name="y" value="266" />
     <option name="width" value="1375" />
     <option name="height" value="1167" />
   </component>
@@ -645,11 +645,19 @@
       <created>1386627353681</created>
       <updated>1386627353681</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="fixing basic code">
+      <created>1386627431148</created>
+      <updated>1386627431148</updated>
+    </task>
+    <task id="LOCAL-00064" summary="fixing basic code">
+      <created>1386627620113</created>
+      <updated>1386627620113</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="139" width="1375" height="1167" extended-state="0" />
+    <frame x="108" y="266" width="1375" height="1167" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -779,20 +787,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pi_master.py">
+    <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="35" selection-start="8006" selection-end="8006" vertical-scroll-proportion="-8.038462" vertical-offset="3166" max-vertical-offset="3825">
+        <state line="32" column="66" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="810">
           <folding>
-            <element signature="e#24#51#0" expanded="true" />
+            <element signature="e#25#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pi_camera.py">
+    <entry file="file://$PROJECT_DIR$/pi_master.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1737" selection-end="1737" vertical-scroll-proportion="0.79389316" vertical-offset="185" max-vertical-offset="855">
+        <state line="222" column="33" selection-start="7895" selection-end="7895" vertical-scroll-proportion="0.2607313" vertical-offset="3166" max-vertical-offset="3855">
           <folding>
-            <element signature="e#25#109#0" expanded="true" />
+            <element signature="e#24#51#0" expanded="true" />
           </folding>
         </state>
       </provider>

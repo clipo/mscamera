@@ -227,7 +227,9 @@ def main():
             GPIO.setup(OUTPUT_PIN, GPIO.OUT)
             GPIO.output(OUTPUT_PIN, GPIO.HIGH)
             time.sleep(.1)
-            GPIO.output(OUTPUT_PIN, GPIO.LOW)
+            GPIO.setup(OUTPUT_PIN, GPIO.OUT)
+            GPIO.output(OUTPUT_PIN, False)
+
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
