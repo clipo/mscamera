@@ -3,12 +3,6 @@ from subprocess import call
 import gps
 import RPi.GPIO as GPIO
 
-try:
-    call(["sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock"], shell=True)
-except RuntimeError:
-    print ("Cannot get the gps process to run. try: sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock" )
-    sys.exit("quitting.")
-
 import datetime    # needed for timestamping outputfile
 import math
 import csv
@@ -17,14 +11,21 @@ import sys         # needed to get command line parameter which is time delay in
 import time        # nedeed to put program to sleep while waiting for next photo in low power
 import picamera
 
+
+try:
+    call(["sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock"], shell=True)
+except RuntimeError:
+    print ("Cannot get the gps process to run. try: sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock" )
+    sys.exit("quitting.")
+
 ## this program will send the trigger for the multiple cameras (via pin 4)
 ## The trigger will be distance based using the GPS (ultimate GPS)
 ## this master computer must be set up as an access point (so the others can connect to it).
 ## The computer will look for files from the other PIs in the ftp directory
 ## and will bring them locally to assemble them into a GDAL, IMG file (multiband) (py_makeMultiSpectral.py)
 ## and then will trigger the creation of an NDVI (NDVI.py)
-OUTPUT_PIN =7  ##
 global OUTPUT_PIN
+OUTPUT_PIN =7
 
 ts=datetime.datetime.now()
 oldTime=ts
@@ -222,14 +223,16 @@ def main():
             print "take a photo!"
             ### tell everyone to take the photo!
             takePicture()
-            GPIO.output(7, GPIO.HIGH)
+            GPIO.setmode(GPIO.BOARD)
+            GPIO.setup(OUTPUT_PIN, GPIO.OUT)
+            GPIO.output(OUTPUT_PIN, GPIO.HIGH)
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
             oldZone = currentZone
             cTime=currentNorthing=currentEasting=currentZone=latitude=longitude=altitude=speed=0.0
             writer.writerow([cTime,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
-            GPIO.output(7, GPIO.LOW)
+            GPIO.output(OUTPUT_PIN, GPIO.LOW)
             ts=datetime.datetime.now()
             oldTime=ts
 
