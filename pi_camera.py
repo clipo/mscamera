@@ -46,4 +46,5 @@ while True:
     wait += 1
     if GPIO.event_detected(INPUT_PIN):
         takePicture(INPUT_PIN)
+        GPIO.setup(INPUT_PIN, GPIO.IN)
         GPIO.add_event_detect(INPUT_PIN, GPIO.RISING)
