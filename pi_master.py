@@ -226,13 +226,15 @@ def main():
             GPIO.setmode(GPIO.BOARD)
             GPIO.setup(OUTPUT_PIN, GPIO.OUT)
             GPIO.output(OUTPUT_PIN, GPIO.HIGH)
+            time.sleep(.1)
+            GPIO.output(OUTPUT_PIN, GPIO.LOW)
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
             oldZone = currentZone
             cTime=currentNorthing=currentEasting=currentZone=latitude=longitude=altitude=speed=0.0
             writer.writerow([cTime,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
-            GPIO.output(OUTPUT_PIN, GPIO.LOW)
+
             ts=datetime.datetime.now()
             oldTime=ts
 
