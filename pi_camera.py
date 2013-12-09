@@ -26,7 +26,8 @@ def takePicture(INPUT_PIN):
         camera.start_preview()
         time.sleep(.1)
         camera.capture(filename, 'raw')
-    print "Picture %s complete."
+    print "Picture %s complete." % filename
+
 
 
 GPIO.setmode(GPIO.BOARD)  # Set's GPIO pins to BOARD numbering
@@ -43,3 +44,5 @@ while True:
     # basically do nothing but wait for the pin to go HIGH
     # do nothing.
     wait += 1
+    if GPIO.event_detected(INPUT_PIN):
+        takePicture(INPUT_PIN)
