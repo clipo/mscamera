@@ -13,9 +13,7 @@ import picamera
 
 ## need to connect to the master computer via FTP.
 
-GPIO.setmode(GPIO.BCM)  # Set's GPIO pins to BCM GPIO numbering
-INPUT_PIN = 4           # Pin 4
-GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
+
 
 
 print "Running..."
@@ -44,6 +42,10 @@ def takeAPhoto():
         time.sleep(1)
         camera.capture(filename, 'raw')
 
+
+GPIO.setmode(GPIO.BOARD)  # Set's GPIO pins to BOARD numbering
+INPUT_PIN = 7           # Pin 4
+GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
 GPIO.add_event_detect(INPUT_PIN, GPIO.RISING)
 GPIO.add_event_callback(INPUT_PIN, takePicture,bouncetime=200)
         # Wait for the input to go high, run the function when it does
