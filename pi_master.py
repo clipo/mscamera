@@ -1,11 +1,7 @@
 __author__ = 'carllipo'
 from subprocess import call
 import gps
-try:
-    import RPi.GPIO as GPIO
-
-except RuntimeError:
-    print("Error importing RPi.GPIO!  This is probably because you need superuser privileges.  You can achieve this by using 'sudo' to run your script")
+import RPi.GPIO as GPIO
 
 try:
     call(["sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock"], shell=True)
@@ -17,7 +13,6 @@ import datetime    # needed for timestamping outputfile
 import math
 import csv
 import datetime
-
 import sys         # needed to get command line parameter which is time delay in seconds
 import time        # nedeed to put program to sleep while waiting for next photo in low power
 import picamera
@@ -28,6 +23,8 @@ import picamera
 ## The computer will look for files from the other PIs in the ftp directory
 ## and will bring them locally to assemble them into a GDAL, IMG file (multiband) (py_makeMultiSpectral.py)
 ## and then will trigger the creation of an NDVI (NDVI.py)
+OUTPUT_PIN =7  ##
+global OUTPUT_PIN
 
 ts=datetime.datetime.now()
 oldTime=ts
@@ -37,7 +34,6 @@ log = open(a, 'wb')
 writer = csv.writer(log)
 values= ["Time","Northing","Easting","Zone","Latitude", "Longitude", "Altitude", "Speed"]
 writer.writerows(values)
-
 
 # minimum distance between shots (meters)
 distanceForNewPhoto=30
@@ -166,10 +162,6 @@ def main():
     print ("Setup...")
     setup()
 
-    OUTPUT_PIN=7
-    GPIO.setmode(GPIO.BOARD)
-    GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
-    print "Version:", GPIO.VERSION
     print ("Setup complete... now starting loop.") 
     ## Now begin main loop. Keep doing this forever
     # Listen on port 2947 (gpsd) of localhost
@@ -241,8 +233,13 @@ def main():
             ts=datetime.datetime.now()
             oldTime=ts
 
+def __init__():
+    GPIO.cleanup()
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(OUTPUT_PIN, GPIO.OUT)
+    GPIO.output(OUTPUT_PIN, False)
 
 if __name__ == "__main__":
-
+    __init__()
     main()
     GPIO.cleanup()

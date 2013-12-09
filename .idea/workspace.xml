@@ -67,7 +67,7 @@
       <file leaf-file-name="pi_master.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="225" column="5" selection-start="7984" selection-end="7985" vertical-scroll-proportion="0.33227345" vertical-offset="3166" max-vertical-offset="3795">
+            <state line="240" column="0" selection-start="8638" selection-end="8638" vertical-scroll-proportion="0.7853736" vertical-offset="3106" max-vertical-offset="3750">
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -152,8 +152,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="969" />
-    <option name="y" value="134" />
+    <option name="x" value="488" />
+    <option name="y" value="22" />
     <option name="width" value="1375" />
     <option name="height" value="1167" />
   </component>
@@ -565,11 +565,15 @@
       <created>1386624326876</created>
       <updated>1386624326876</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="fixing basic code">
+      <created>1386624417077</created>
+      <updated>1386624417077</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="969" y="134" width="1375" height="1167" extended-state="0" />
+    <frame x="488" y="22" width="1375" height="1167" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -710,7 +714,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_master.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="5" selection-start="7984" selection-end="7985" vertical-scroll-proportion="0.33227345" vertical-offset="3166" max-vertical-offset="3795">
+        <state line="240" column="0" selection-start="8638" selection-end="8638" vertical-scroll-proportion="0.7853736" vertical-offset="3106" max-vertical-offset="3750">
           <folding>
             <element signature="e#24#51#0" expanded="true" />
           </folding>
