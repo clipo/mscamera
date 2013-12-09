@@ -19,24 +19,14 @@ def takePicture(INPUT_PIN):
     ts=datetime.datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
+    #call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
     print "Taking a picture: %s " % filename
     with picamera.PiCamera() as camera:
         camera.resolution = (1024, 768)
         camera.start_preview()
         time.sleep(.1)
         camera.capture(filename, 'raw')
-
-def takeAPhoto():
-    ts=datetime.now()          # get time step
-    a= ts.strftime("%j%H%M%S")
-    filename = "P-"+a+".jpg"   # give image file time-stamped name
-    #call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
-    ## now trigger the ftp of the image to the master computer. may need to encapsulate this so that it can be a subprocess
-    with picamera.PiCamera() as camera:
-        camera.resolution = (1024, 768)
-        camera.start_preview()
-        time.sleep(1)
-        camera.capture(filename, 'raw')
+    print "Picture %s complete."
 
 
 GPIO.setmode(GPIO.BOARD)  # Set's GPIO pins to BOARD numbering
@@ -45,7 +35,6 @@ GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
 GPIO.add_event_detect(INPUT_PIN, GPIO.RISING)
 GPIO.add_event_callback(INPUT_PIN, takePicture,bouncetime=200)
         # Wait for the input to go high, run the function when it does
-
 
 # Create a function to run when the input is high
 wait=0
