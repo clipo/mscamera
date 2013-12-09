@@ -231,6 +231,7 @@ def main():
             oldNorthing = currentNorthing
             oldEasting = currentEasting
             oldZone = currentZone
+            cTime=currentNorthing=currentEasting=currentZone=latitude=longitude=altitude=speed=0.0
             writer.writerows([cTime,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
             GPIO.output(4,False)
             ts=datetime.datetime.now()
