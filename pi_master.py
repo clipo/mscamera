@@ -225,11 +225,9 @@ def main():
             takePicture()
             GPIO.setmode(GPIO.BOARD)
             GPIO.setup(OUTPUT_PIN, GPIO.OUT)
-            GPIO.output(OUTPUT_PIN, GPIO.HIGH)
+            GPIO.output(OUTPUT_PIN, not GPIO.input(OUTPUT_PIN))
             time.sleep(.1)
-            GPIO.setup(OUTPUT_PIN, GPIO.OUT)
-            GPIO.output(OUTPUT_PIN, False)
-
+            GPIO.output(OUTPUT_PIN, not GPIO.input(OUTPUT_PIN))
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
