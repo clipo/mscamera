@@ -34,7 +34,7 @@ GPIO.setmode(GPIO.BOARD)  # Set's GPIO pins to BOARD numbering
 INPUT_PIN = 7           # Pin 4
 GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
 GPIO.add_event_detect(INPUT_PIN, GPIO.RISING)
-#GPIO.add_event_callback(INPUT_PIN, takePicture,bouncetime=200)
+GPIO.add_event_callback(INPUT_PIN, takePicture)
 # Wait for the input to go high, run the function when it does
 
 # Create a function to run when the input is high
@@ -44,9 +44,7 @@ while True:
     # basically do nothing but wait for the pin to go HIGH
     # do nothing.
     wait += 1
-    if GPIO.event_detected(INPUT_PIN):
-        takePicture(INPUT_PIN)
-        GPIO.remove_event_detect(INPUT_PIN)
-        GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
-        GPIO.add_event_detect(INPUT_PIN, GPIO.RISING)
+    #if GPIO.event_detected(INPUT_PIN):
+    #    takePicture(INPUT_PIN)
+
 
