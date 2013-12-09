@@ -37,7 +37,7 @@ writer = csv.writer(log)
 values= ["Time","Northing","Easting","Zone","Latitude", "Longitude", "Altitude", "Speed"]
 writer.writerows(values)
 
-OUTPUT_PIN=4
+OUTPUT_PIN=7
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(OUTPUT_PIN, GPIO.OUT)
 
@@ -226,14 +226,14 @@ def main():
             print "take a photo!"
             ### tell everyone to take the photo!
             takePicture()
-            GPIO.output(4, True)
+            GPIO.output(7, True)
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
             oldZone = currentZone
             cTime=currentNorthing=currentEasting=currentZone=latitude=longitude=altitude=speed=0.0
             writer.writerow([cTime,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
-            GPIO.output(4,False)
+            GPIO.output(7,False)
             ts=datetime.datetime.now()
             oldTime=ts
 
@@ -241,3 +241,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+    GPIO.cleanup()
