@@ -37,9 +37,6 @@ writer = csv.writer(log)
 values= ["Time","Northing","Easting","Zone","Latitude", "Longitude", "Altitude", "Speed"]
 writer.writerows(values)
 
-OUTPUT_PIN=12
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(OUTPUT_PIN, GPIO.OUT)
 
 # minimum distance between shots (meters)
 distanceForNewPhoto=30
@@ -167,6 +164,11 @@ def takePicture():
 def main():
     print ("Setup...")
     setup()
+
+    OUTPUT_PIN=12
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(OUTPUT_PIN, GPIO.OUT, initial=GPIO.LOW)
+
     print ("Setup complete... now starting loop.") 
     ## Now begin main loop. Keep doing this forever
     # Listen on port 2947 (gpsd) of localhost
@@ -185,6 +187,7 @@ def main():
     altitude=0.0
     speed=0.0
     cTime=0
+
     oldTime = datetime.datetime.now()
     while True:
         time.sleep(1)
@@ -226,14 +229,14 @@ def main():
             print "take a photo!"
             ### tell everyone to take the photo!
             takePicture()
-            GPIO.output(OUTPUT_PIN, True)
+            GPIO.output(OUTPUT_PIN, GPIO.HIGH)
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
             oldZone = currentZone
             cTime=currentNorthing=currentEasting=currentZone=latitude=longitude=altitude=speed=0.0
             writer.writerow([cTime,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
-            GPIO.output(OUTPUT_PIN,False)
+            GPIO.output(OUTPUT_PIN, GPIO.LOW)
             ts=datetime.datetime.now()
             oldTime=ts
 

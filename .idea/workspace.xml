@@ -67,7 +67,7 @@
       <file leaf-file-name="pi_master.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="235" column="34" selection-start="8659" selection-end="8659" vertical-scroll-proportion="0.8346582" vertical-offset="3000" max-vertical-offset="3735">
+            <state line="238" column="45" selection-start="8708" selection-end="8708" vertical-scroll-proportion="0.8569157" vertical-offset="3031" max-vertical-offset="3780">
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -152,8 +152,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1436" />
-    <option name="y" value="104" />
+    <option name="x" value="969" />
+    <option name="y" value="134" />
     <option name="width" value="1375" />
     <option name="height" value="1167" />
   </component>
@@ -553,11 +553,15 @@
       <created>1386623483391</created>
       <updated>1386623483391</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="fixing basic code">
+      <created>1386623570321</created>
+      <updated>1386623570321</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1436" y="104" width="1375" height="1167" extended-state="0" />
+    <frame x="969" y="134" width="1375" height="1167" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -698,7 +702,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_master.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="34" selection-start="8659" selection-end="8659" vertical-scroll-proportion="0.8346582" vertical-offset="3000" max-vertical-offset="3735">
+        <state line="238" column="45" selection-start="8708" selection-end="8708" vertical-scroll-proportion="0.8569157" vertical-offset="3031" max-vertical-offset="3780">
           <folding>
             <element signature="e#24#51#0" expanded="true" />
           </folding>
