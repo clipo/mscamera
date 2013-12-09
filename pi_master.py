@@ -3,6 +3,7 @@ from subprocess import call
 import gps
 try:
     import RPi.GPIO as GPIO
+
 except RuntimeError:
     print("Error importing RPi.GPIO!  This is probably because you need superuser privileges.  You can achieve this by using 'sudo' to run your script")
 
@@ -166,7 +167,7 @@ def main():
     setup()
 
     OUTPUT_PIN=12
-    GPIO.setmode(GPIO.BOARD)
+    GPIO.setmode(GPIO.BCM)
     GPIO.setup(OUTPUT_PIN, GPIO.OUT, initial=GPIO.LOW)
 
     print ("Setup complete... now starting loop.") 
