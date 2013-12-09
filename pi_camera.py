@@ -13,13 +13,9 @@ import picamera
 
 ## need to connect to the master computer via FTP.
 
-
-
-
 print "Running..."
 
 def takePicture(INPUT_PIN):
-
     ts=datetime.datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
@@ -27,7 +23,7 @@ def takePicture(INPUT_PIN):
     with picamera.PiCamera() as camera:
         camera.resolution = (1024, 768)
         camera.start_preview()
-        time.sleep(1)
+        time.sleep(.1)
         camera.capture(filename, 'raw')
 
 def takeAPhoto():
@@ -46,9 +42,10 @@ def takeAPhoto():
 GPIO.setmode(GPIO.BOARD)  # Set's GPIO pins to BOARD numbering
 INPUT_PIN = 7           # Pin 4
 GPIO.setup(INPUT_PIN, GPIO.IN)  # Set our input pin to be an input
-GPIO.add_event_detect(INPUT_PIN, GPIO.HIGH)
+GPIO.add_event_detect(INPUT_PIN, GPIO.RISING)
 GPIO.add_event_callback(INPUT_PIN, takePicture,bouncetime=200)
         # Wait for the input to go high, run the function when it does
+
 
 # Create a function to run when the input is high
 wait=0

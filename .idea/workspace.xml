@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fc34ea2-c8b2-416b-9d1b-a32b3de342a8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi_camera.py" afterPath="$PROJECT_DIR$/pi_camera.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mscamera.iws" />
@@ -28,7 +29,7 @@
       <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="30" selection-start="2054" selection-end="2054" vertical-scroll-proportion="0.77099234" vertical-offset="305" max-vertical-offset="975">
+            <state line="47" column="0" selection-start="1965" selection-end="1965" vertical-scroll-proportion="0.8854962" vertical-offset="125" max-vertical-offset="930">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
@@ -588,7 +589,11 @@
       <created>1386625884412</created>
       <updated>1386625884412</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fixing basic code">
+      <created>1386625908357</created>
+      <updated>1386625908357</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -733,7 +738,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="30" selection-start="2054" selection-end="2054" vertical-scroll-proportion="0.77099234" vertical-offset="305" max-vertical-offset="975">
+        <state line="47" column="0" selection-start="1965" selection-end="1965" vertical-scroll-proportion="0.8854962" vertical-offset="125" max-vertical-offset="930">
           <folding>
             <element signature="e#25#109#0" expanded="true" />
           </folding>
