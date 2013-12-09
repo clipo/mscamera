@@ -166,10 +166,10 @@ def main():
     print ("Setup...")
     setup()
 
-    OUTPUT_PIN=12
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(OUTPUT_PIN, GPIO.OUT, initial=GPIO.LOW)
-
+    OUTPUT_PIN=7
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(7, GPIO.OUT, initial=GPIO.LOW)
+    print "Version:", GPIO.VERSION
     print ("Setup complete... now starting loop.") 
     ## Now begin main loop. Keep doing this forever
     # Listen on port 2947 (gpsd) of localhost
@@ -230,14 +230,14 @@ def main():
             print "take a photo!"
             ### tell everyone to take the photo!
             takePicture()
-            GPIO.output(OUTPUT_PIN, GPIO.HIGH)
+            GPIO.output(7, GPIO.HIGH)
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
             oldZone = currentZone
             cTime=currentNorthing=currentEasting=currentZone=latitude=longitude=altitude=speed=0.0
             writer.writerow([cTime,currentNorthing,currentEasting,currentZone,latitude, longitude, altitude,speed])
-            GPIO.output(OUTPUT_PIN, GPIO.LOW)
+            GPIO.output(7, GPIO.LOW)
             ts=datetime.datetime.now()
             oldTime=ts
 
