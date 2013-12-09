@@ -46,5 +46,9 @@ while True:
     wait += 1
     #if GPIO.event_detected(INPUT_PIN):
     #    takePicture(INPUT_PIN)
+    if GPIO.input(INPUT_PIN):
+        print('Input was HIGH')
+    else:
+        print('Input was LOW')
 
 
