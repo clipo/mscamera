@@ -226,7 +226,7 @@ def main():
             GPIO.setmode(GPIO.BOARD)
             GPIO.setup(OUTPUT_PIN, GPIO.OUT)
             GPIO.output(OUTPUT_PIN, not GPIO.input(OUTPUT_PIN))
-            time.sleep(.1)
+            time.sleep(1)
             GPIO.output(OUTPUT_PIN, not GPIO.input(OUTPUT_PIN))
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing

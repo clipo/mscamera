@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fc34ea2-c8b2-416b-9d1b-a32b3de342a8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi_camera.py" afterPath="$PROJECT_DIR$/pi_camera.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pi_master.py" afterPath="$PROJECT_DIR$/pi_master.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mscamera.iws" />
@@ -26,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pi_camera.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="34" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.79389316" vertical-offset="140" max-vertical-offset="840">
+            <state line="44" column="34" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="840">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
@@ -64,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pi_master.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pi_master.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="229" column="28" selection-start="8172" selection-end="8172" vertical-scroll-proportion="-10.923077" vertical-offset="3151" max-vertical-offset="3825">
+            <state line="228" column="24" selection-start="8141" selection-end="8141" vertical-scroll-proportion="0.42766297" vertical-offset="3151" max-vertical-offset="3825">
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -146,8 +146,8 @@
         <option value="$PROJECT_DIR$/py_takePhoto.py" />
         <option value="$PROJECT_DIR$/NDVI.py" />
         <option value="$PROJECT_DIR$/pi_takePhoto.py" />
-        <option value="$PROJECT_DIR$/pi_master.py" />
         <option value="$PROJECT_DIR$/pi_camera.py" />
+        <option value="$PROJECT_DIR$/pi_master.py" />
       </list>
     </option>
   </component>
@@ -673,7 +673,11 @@
       <created>1386628119756</created>
       <updated>1386628119756</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="fixing basic code">
+      <created>1386628165238</created>
+      <updated>1386628165238</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -807,20 +811,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pi_master.py">
+    <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="229" column="28" selection-start="8172" selection-end="8172" vertical-scroll-proportion="-10.923077" vertical-offset="3151" max-vertical-offset="3825">
+        <state line="44" column="34" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="840">
           <folding>
-            <element signature="e#24#51#0" expanded="true" />
+            <element signature="e#25#109#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pi_camera.py">
+    <entry file="file://$PROJECT_DIR$/pi_master.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="34" selection-start="1757" selection-end="1757" vertical-scroll-proportion="0.79389316" vertical-offset="140" max-vertical-offset="840">
+        <state line="228" column="24" selection-start="8141" selection-end="8141" vertical-scroll-proportion="0.42766297" vertical-offset="3151" max-vertical-offset="3825">
           <folding>
-            <element signature="e#25#109#0" expanded="true" />
+            <element signature="e#24#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
