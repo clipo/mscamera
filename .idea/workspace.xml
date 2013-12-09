@@ -67,7 +67,7 @@
       <file leaf-file-name="pi_master.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_master.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="12" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.3799682" vertical-offset="346" max-vertical-offset="3735">
+            <state line="235" column="34" selection-start="8659" selection-end="8659" vertical-scroll-proportion="0.8346582" vertical-offset="3000" max-vertical-offset="3735">
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
@@ -549,7 +549,11 @@
       <created>1386623360998</created>
       <updated>1386623360998</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="fixing basic code">
+      <created>1386623483391</created>
+      <updated>1386623483391</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -694,7 +698,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_master.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="12" selection-start="1530" selection-end="1530" vertical-scroll-proportion="0.3799682" vertical-offset="346" max-vertical-offset="3735">
+        <state line="235" column="34" selection-start="8659" selection-end="8659" vertical-scroll-proportion="0.8346582" vertical-offset="3000" max-vertical-offset="3735">
           <folding>
             <element signature="e#24#51#0" expanded="true" />
           </folding>
