@@ -42,6 +42,7 @@ while True:
     # do nothing.
     wait += 1
     time.sleep(.1)
+    GPIO.setup(INPUT_PIN, GPIO.IN)
     print GPIO.input(INPUT_PIN)
 
 
