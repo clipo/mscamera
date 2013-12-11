@@ -15,7 +15,7 @@ import picamera
 
 print "Running..."
 
-def takePicture():
+def takePicture(INPUT_PIN):
     ts=datetime.datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
