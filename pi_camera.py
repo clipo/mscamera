@@ -43,7 +43,7 @@ while True:
     # do nothing.
     wait += 1
     GPIO.setup(INPUT_PIN, GPIO.IN)
-    GPIO.add_event_detect(INPUT_PIN, GPIO.HIGH, callback=takePicture, bouncetime=200)
+
     if GPIO.input(INPUT_PIN):
         print('Input was HIGH')
         time.sleep(2)
