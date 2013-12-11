@@ -41,6 +41,7 @@ while True:
     # basically do nothing but wait for the pin to go HIGH
     # do nothing.
     wait += 1
+    print "State: ",GPIO.IN(INPUT_PIN)
 
 
 
