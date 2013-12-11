@@ -15,15 +15,15 @@ import picamera
 
 print "Running..."
 
-def takePicture(INPUT_PIN):
+def takePicture():
     ts=datetime.datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
-    call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
-    print "Taking a picture: %s " % filename
+    call(["raspistill -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
     #with picamera.PiCamera() as camera:
     #    camera.resolution = (1024, 768)
     #    camera.start_preview()
+    #    time.sleep(1)
     #    camera.capture(filename, 'raw')
 
 def takeAPhoto():
