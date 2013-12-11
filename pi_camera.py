@@ -50,8 +50,10 @@ while True:
     # do nothing.
     wait += 1
     GPIO.setup(INPUT_PIN, GPIO.IN)
+    print "INPUT: ",GPIO.input(INPUT_PIN)
     if GPIO.input(INPUT_PIN) > 0:
         takePicture()
+        print "INPUT: ",GPIO.input(INPUT_PIN)
 
 
 
