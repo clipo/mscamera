@@ -26,16 +26,13 @@ def takePicture(INPUT_PIN):
         camera.start_preview()
         time.sleep(.1)
         camera.capture(filename, 'raw')
-    GPIO.cleanup()
-    GPIO.remove_event_detect(INPUT_PIN)
-    GPIO.setup(INPUT_PIN, GPIO.IN)
-    GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture)
 
 GPIO.cleanup()
 GPIO.setmode(GPIO.BOARD)  # Set's GPIO pins to BOARD numbering
 INPUT_PIN = 7           # Pin 4
-GPIO.setup(INPUT_PIN, GPIO.IN)
-GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture)
+GPIO.setup(INPUT_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+#GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture)
+GPIO.add_event_detect(17, GPIO.FALLING, callback=lambda x: takePicture(INPUT_PIN), bouncetime=2000)
 # Wait for the input to go high, run the function when it does
 
 # Create a function to run when the input is high
