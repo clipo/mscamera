@@ -29,7 +29,7 @@
       <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="13" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.90839696" vertical-offset="50" max-vertical-offset="930">
+            <state line="25" column="21" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.26717559" vertical-offset="200" max-vertical-offset="945">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
@@ -709,7 +709,23 @@
       <created>1386798656096</created>
       <updated>1386798656096</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="fixing basic code">
+      <created>1386798716434</created>
+      <updated>1386798716434</updated>
+    </task>
+    <task id="LOCAL-00080" summary="fixing basic code">
+      <created>1386798820414</created>
+      <updated>1386798820414</updated>
+    </task>
+    <task id="LOCAL-00081" summary="fixing basic code">
+      <created>1386799026151</created>
+      <updated>1386799026151</updated>
+    </task>
+    <task id="LOCAL-00082" summary="fixing basic code">
+      <created>1386799303681</created>
+      <updated>1386799303682</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -854,7 +870,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="13" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.90839696" vertical-offset="50" max-vertical-offset="930">
+        <state line="25" column="21" selection-start="1087" selection-end="1087" vertical-scroll-proportion="0.26717559" vertical-offset="200" max-vertical-offset="945">
           <folding>
             <element signature="e#25#109#0" expanded="true" />
           </folding>
