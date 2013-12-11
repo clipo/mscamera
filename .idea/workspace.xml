@@ -29,7 +29,7 @@
       <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="40" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.4266467" vertical-offset="60" max-vertical-offset="975">
+            <state line="41" column="0" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.8308383" vertical-offset="60" max-vertical-offset="975">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
@@ -817,7 +817,11 @@
       <created>1386801344578</created>
       <updated>1386801344579</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="fixing basic code">
+      <created>1386801526237</created>
+      <updated>1386801526237</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -964,7 +968,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="40" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.4266467" vertical-offset="60" max-vertical-offset="975">
+        <state line="41" column="0" selection-start="1753" selection-end="1753" vertical-scroll-proportion="0.8308383" vertical-offset="60" max-vertical-offset="975">
           <folding>
             <element signature="e#25#109#0" expanded="true" />
           </folding>

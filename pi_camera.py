@@ -38,8 +38,8 @@ GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)  # Set's GPIO pins to BOARD numbering
 INPUT_PIN = 23           # Pin 4
 GPIO.setup(INPUT_PIN, GPIO.IN)
-GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture, bouncetime=200 )
-#GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=lambda x: takePicture )
+#GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture, bouncetime=200 )
+GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=lambda x: takePicture )
 # Wait for the input to go high, run the function when it does
 
 # Create a function to run when the input is high
