@@ -25,7 +25,7 @@ except RuntimeError:
 ## and will bring them locally to assemble them into a GDAL, IMG file (multiband) (py_makeMultiSpectral.py)
 ## and then will trigger the creation of an NDVI (NDVI.py)
 global OUTPUT_PIN
-OUTPUT_PIN =7
+OUTPUT_PIN =25
 
 ts=datetime.datetime.now()
 oldTime=ts
@@ -240,7 +240,7 @@ def main():
 
 def __init__():
     GPIO.cleanup()
-    GPIO.setmode(GPIO.BOARD)
+    GPIO.setmode(GPIO.BCM)
     GPIO.setup(OUTPUT_PIN, GPIO.OUT)
     GPIO.output(OUTPUT_PIN, False)
 
