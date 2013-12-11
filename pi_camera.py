@@ -27,6 +27,7 @@ def takePicture(INPUT_PIN):
         time.sleep(.1)
         camera.capture(filename, 'raw')
     GPIO.cleanup()
+    GPIO.remove_event_detect(INPUT_PIN)
     GPIO.setup(INPUT_PIN, GPIO.IN)
     GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture)
 
