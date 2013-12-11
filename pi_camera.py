@@ -19,12 +19,12 @@ def takePicture(INPUT_PIN):
     ts=datetime.datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
-    #call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
+    call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
     print "Taking a picture: %s " % filename
-    with picamera.PiCamera() as camera:
-        camera.resolution = (1024, 768)
-        camera.start_preview()
-        camera.capture(filename, 'raw')
+    #with picamera.PiCamera() as camera:
+    #    camera.resolution = (1024, 768)
+    #    camera.start_preview()
+    #    camera.capture(filename, 'raw')
 
 def takeAPhoto():
     ts=datetime.datetime.now()          # get time step
