@@ -25,7 +25,7 @@ except RuntimeError:
 ## and will bring them locally to assemble them into a GDAL, IMG file (multiband) (py_makeMultiSpectral.py)
 ## and then will trigger the creation of an NDVI (NDVI.py)
 global OUTPUT_PIN
-OUTPUT_PIN =25
+OUTPUT_PIN =23
 
 ts=datetime.datetime.now()
 oldTime=ts

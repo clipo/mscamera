@@ -29,7 +29,7 @@ def takePicture():
 
 GPIO.cleanup()
 GPIO.setmode(GPIO.BCM)  # Set's GPIO pins to BOARD numbering
-INPUT_PIN = 25           # Pin 4
+INPUT_PIN = 23           # Pin 4
 GPIO.setup(INPUT_PIN, GPIO.IN)
 #GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture)
 GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=lambda x: takePicture())
