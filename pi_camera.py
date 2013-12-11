@@ -44,6 +44,7 @@ while True:
     GPIO.setup(INPUT_PIN, GPIO.IN)
     if GPIO.input(INPUT_PIN):
         print('Input was HIGH')
+        time.sleep(2)
     else:
         print('Input was LOW')
 
