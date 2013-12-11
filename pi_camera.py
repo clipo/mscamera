@@ -28,6 +28,7 @@ def takePicture(INPUT_PIN):
         camera.capture(filename, 'raw')
     print "Picture %s complete." % filename
 
+GPIO.cleanup()
 GPIO.setmode(GPIO.BOARD)  # Set's GPIO pins to BOARD numbering
 INPUT_PIN = 7           # Pin 4
 GPIO.setup(INPUT_PIN, GPIO.IN)

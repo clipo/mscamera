@@ -29,7 +29,7 @@
       <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="29" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.73282444" vertical-offset="0" max-vertical-offset="825">
+            <state line="43" column="13" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.90839696" vertical-offset="50" max-vertical-offset="930">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
@@ -689,7 +689,27 @@
       <created>1386628577669</created>
       <updated>1386628577669</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="fixing basic code">
+      <created>1386797443668</created>
+      <updated>1386797443668</updated>
+    </task>
+    <task id="LOCAL-00075" summary="fixing basic code">
+      <created>1386797521751</created>
+      <updated>1386797521751</updated>
+    </task>
+    <task id="LOCAL-00076" summary="fixing basic code">
+      <created>1386797621220</created>
+      <updated>1386797621221</updated>
+    </task>
+    <task id="LOCAL-00077" summary="fixing basic code">
+      <created>1386797697295</created>
+      <updated>1386797697295</updated>
+    </task>
+    <task id="LOCAL-00078" summary="fixing basic code">
+      <created>1386798656096</created>
+      <updated>1386798656096</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -834,7 +854,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="29" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.73282444" vertical-offset="0" max-vertical-offset="825">
+        <state line="43" column="13" selection-start="1684" selection-end="1684" vertical-scroll-proportion="0.90839696" vertical-offset="50" max-vertical-offset="930">
           <folding>
             <element signature="e#25#109#0" expanded="true" />
           </folding>
