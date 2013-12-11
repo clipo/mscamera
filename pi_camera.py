@@ -26,7 +26,7 @@ def takePicture(INPUT_PIN):
         camera.start_preview()
         time.sleep(.1)
         camera.capture(filename, 'raw')
-    print "Picture %s complete." % filename
+    GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture)
 
 GPIO.cleanup()
 GPIO.setmode(GPIO.BOARD)  # Set's GPIO pins to BOARD numbering
