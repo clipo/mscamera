@@ -19,12 +19,12 @@ def takePicture():
     ts=datetime.datetime.now()          # get time step
     a= ts.strftime("%j%H%M%S")
     filename = "P-"+a+".jpg"   # give image file time-stamped name
-    call(["raspistill -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
-    #with picamera.PiCamera() as camera:
-    #    camera.resolution = (1024, 768)
-    #    camera.start_preview()
-    #    time.sleep(1)
-    #    camera.capture(filename, 'raw')
+    #call(["raspistill -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
+    with picamera.PiCamera() as camera:
+        camera.resolution = (1024, 768)
+        camera.start_preview()
+        time.sleep(1)
+        camera.capture(filename, 'raw')
 
 def takeAPhoto():
     ts=datetime.datetime.now()          # get time step
@@ -39,7 +39,7 @@ GPIO.setmode(GPIO.BCM)  # Set's GPIO pins to BOARD numbering
 INPUT_PIN = 23           # Pin 4
 GPIO.setup(INPUT_PIN, GPIO.IN)
 #GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture, bouncetime=200 )
-GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=lambda x: takePicture )
+#GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=lambda x: takePicture )
 # Wait for the input to go high, run the function when it does
 
 # Create a function to run when the input is high
@@ -49,7 +49,8 @@ while True:
     # basically do nothing but wait for the pin to go HIGH
     # do nothing.
     wait += 1
-    print GPIO.input(INPUT_PIN)
+    if GPIO.input(INPUT_PIN) > 0:
+        takePicture()
 
 
 
