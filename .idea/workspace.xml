@@ -29,7 +29,7 @@
       <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="22" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.3129771" vertical-offset="155" max-vertical-offset="930">
+            <state line="31" column="14" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.7099237" vertical-offset="0" max-vertical-offset="930">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
@@ -40,7 +40,7 @@
       <file leaf-file-name="robotCostume.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Robot/robotCostume.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="0" selection-start="5749" selection-end="5835" vertical-scroll-proportion="0.0" vertical-offset="2000" max-vertical-offset="2820">
+            <state line="167" column="0" selection-start="5749" selection-end="5835" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2820">
               <folding />
             </state>
           </provider>
@@ -753,7 +753,15 @@
       <created>1386799844869</created>
       <updated>1386799844877</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="fixing basic code">
+      <created>1386799899717</created>
+      <updated>1386799899726</updated>
+    </task>
+    <task id="LOCAL-00091" summary="fixing basic code">
+      <created>1386800078377</created>
+      <updated>1386800078378</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -893,14 +901,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Robot/robotCostume.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="0" selection-start="5749" selection-end="5835" vertical-scroll-proportion="0.0" vertical-offset="2165" max-vertical-offset="2820">
+        <state line="167" column="0" selection-start="5749" selection-end="5835" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2820">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="22" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.3129771" vertical-offset="155" max-vertical-offset="930">
+        <state line="31" column="14" selection-start="1253" selection-end="1253" vertical-scroll-proportion="0.7099237" vertical-offset="0" max-vertical-offset="930">
           <folding>
             <element signature="e#25#109#0" expanded="true" />
           </folding>
