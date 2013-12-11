@@ -49,8 +49,7 @@ while True:
     # basically do nothing but wait for the pin to go HIGH
     # do nothing.
     wait += 1
-    if GPIO.input(INPUT_PIN) is not False:
-        print "HIGH"
+    print GPIO.input(INPUT_PIN)
 
 
 

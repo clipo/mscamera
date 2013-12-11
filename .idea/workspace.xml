@@ -29,7 +29,7 @@
       <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="85" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.43862274" vertical-offset="307" max-vertical-offset="1005">
+            <state line="51" column="31" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.6856288" vertical-offset="307" max-vertical-offset="990">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
@@ -837,7 +837,11 @@
       <created>1386801737266</created>
       <updated>1386801737267</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="&#10;s">
+      <created>1386801784973</created>
+      <updated>1386801784973</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -877,7 +881,9 @@
     <MESSAGE value="now listens to pin #4 and takes photo when pin is high..." />
     <MESSAGE value="added various additional scripts for slave and master camera boards&#10;" />
     <MESSAGE value="fixing basic code" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixing basic code" />
+    <MESSAGE value="&#10;" />
+    <MESSAGE value="&#10;s" />
+    <option name="LAST_COMMIT_MESSAGE" value="&#10;s" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -984,7 +990,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="85" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.43862274" vertical-offset="307" max-vertical-offset="1005">
+        <state line="51" column="31" selection-start="2118" selection-end="2118" vertical-scroll-proportion="0.6856288" vertical-offset="307" max-vertical-offset="990">
           <folding>
             <element signature="e#25#109#0" expanded="true" />
           </folding>
