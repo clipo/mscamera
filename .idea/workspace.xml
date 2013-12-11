@@ -29,7 +29,7 @@
       <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="43" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.45038167" vertical-offset="125" max-vertical-offset="825">
+            <state line="32" column="29" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.73282444" vertical-offset="0" max-vertical-offset="825">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
@@ -152,8 +152,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="108" />
-    <option name="y" value="266" />
+    <option name="x" value="42" />
+    <option name="y" value="68" />
     <option name="width" value="1375" />
     <option name="height" value="1167" />
   </component>
@@ -685,11 +685,15 @@
       <created>1386628477436</created>
       <updated>1386628477436</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="fixing basic code">
+      <created>1386628577669</created>
+      <updated>1386628577669</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="108" y="266" width="1375" height="1167" extended-state="0" />
+    <frame x="42" y="68" width="1375" height="1167" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -830,7 +834,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="43" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.45038167" vertical-offset="125" max-vertical-offset="825">
+        <state line="32" column="29" selection-start="1329" selection-end="1329" vertical-scroll-proportion="0.73282444" vertical-offset="0" max-vertical-offset="825">
           <folding>
             <element signature="e#25#109#0" expanded="true" />
           </folding>
