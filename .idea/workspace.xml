@@ -29,10 +29,19 @@
       <file leaf-file-name="pi_camera.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pi_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="38" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.3816794" vertical-offset="185" max-vertical-offset="990">
+            <state line="43" column="13" selection-start="1758" selection-end="1758" vertical-scroll-proportion="0.7251908" vertical-offset="170" max-vertical-offset="945">
               <folding>
                 <element signature="e#25#109#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="robotCostume.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Robot/robotCostume.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="167" column="0" selection-start="5749" selection-end="5835" vertical-scroll-proportion="0.0" vertical-offset="2000" max-vertical-offset="2820">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,15 +80,6 @@
               <folding>
                 <element signature="e#24#51#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mergeJpegsToBands.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mergeJpegsToBands.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="7" selection-start="0" selection-end="2657" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1350">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -152,8 +152,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="42" />
-    <option name="y" value="68" />
+    <option name="x" value="100" />
+    <option name="y" value="73" />
     <option name="width" value="1375" />
     <option name="height" value="1167" />
   </component>
@@ -210,7 +210,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Seriation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Robot/robotCostume.py" />
     <property name="FullScreen" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -741,11 +741,19 @@
       <created>1386799533504</created>
       <updated>1386799533512</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="fixing basic code">
+      <created>1386799648021</created>
+      <updated>1386799648021</updated>
+    </task>
+    <task id="LOCAL-00088" summary="fixing basic code">
+      <created>1386799801937</created>
+      <updated>1386799801937</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="68" width="1375" height="1167" extended-state="0" />
+    <frame x="100" y="73" width="1375" height="1167" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -787,11 +795,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mscamera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mscamera.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="24" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
@@ -884,9 +887,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Robot/robotCostume.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="0" selection-start="5749" selection-end="5835" vertical-scroll-proportion="0.0" vertical-offset="2165" max-vertical-offset="2820">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pi_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="38" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.3816794" vertical-offset="185" max-vertical-offset="990">
+        <state line="43" column="13" selection-start="1758" selection-end="1758" vertical-scroll-proportion="0.7251908" vertical-offset="170" max-vertical-offset="945">
           <folding>
             <element signature="e#25#109#0" expanded="true" />
           </folding>
