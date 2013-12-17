@@ -1,7 +1,9 @@
 __author__ = 'carllipo'
 
 from time import sleep  # Allows us to call the sleep function to slow down our loop
-import RPi.GPIO as GPIO # Allows us to call our GPIO pins and names it just GPIO
+#import RPi.GPIO as GPIO # Allows us to call our GPIO pins and names it just GPIO
+import wiringpi2 as wiringpi
+
 import subprocess  # needed to run external program raspistill
 import datetime    # needed for timestamping outputfile
 
@@ -12,7 +14,8 @@ import time        # nedeed to put program to sleep while waiting for next photo
 import picamera
 
 ## need to connect to the master computer via FTP.
-
+wiringpi.wiringPiSetupGpio()
+INPUT_PIN=16
 print "Running..."
 
 def takePicture():
@@ -34,13 +37,6 @@ def takeAPhoto():
     ## now trigger the ftp of the image to the master computer. may need to encapsulate this so that it can be a subprocess
 
 
-GPIO.cleanup()
-GPIO.setmode(GPIO.BCM)  # Set's GPIO pins to BOARD numbering
-INPUT_PIN = 23           # Pin 4
-GPIO.setup(INPUT_PIN, GPIO.IN)
-#GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=takePicture, bouncetime=200 )
-#GPIO.add_event_detect(INPUT_PIN, GPIO.RISING, callback=lambda x: takePicture )
-# Wait for the input to go high, run the function when it does
 
 # Create a function to run when the input is high
 wait=0
@@ -49,11 +45,11 @@ while True:
     # basically do nothing but wait for the pin to go HIGH
     # do nothing.
     wait += 1
-    GPIO.setup(INPUT_PIN, GPIO.IN)
-    print "INPUT: ",GPIO.input(INPUT_PIN)
-    if GPIO.input(INPUT_PIN) > 0:
+    input=wiringpi.digitalRead(INPUT_PIN) # Read pin 1
+    print "INPUT: ",input
+    if input > 0:
         takePicture()
-        print "INPUT: ",GPIO.input(INPUT_PIN)
+
 
 
 

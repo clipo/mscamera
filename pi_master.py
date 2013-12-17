@@ -1,7 +1,8 @@
 __author__ = 'carllipo'
 from subprocess import call
 import gps
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
+import wiringpi2 as wiringpi
 
 import datetime    # needed for timestamping outputfile
 import math
@@ -11,7 +12,10 @@ import sys         # needed to get command line parameter which is time delay in
 import time        # nedeed to put program to sleep while waiting for next photo in low power
 import picamera
 
-
+global OUTPUT_PIN
+OUTPUT_PIN =16
+wiringpi.wiringPiSetupGpio()
+wiringpi.pinMode(OUTPUT_PIN,1)
 try:
     call(["sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock"], shell=True)
 except RuntimeError:
@@ -24,8 +28,7 @@ except RuntimeError:
 ## The computer will look for files from the other PIs in the ftp directory
 ## and will bring them locally to assemble them into a GDAL, IMG file (multiband) (py_makeMultiSpectral.py)
 ## and then will trigger the creation of an NDVI (NDVI.py)
-global OUTPUT_PIN
-OUTPUT_PIN =23
+
 
 ts=datetime.datetime.now()
 oldTime=ts
@@ -223,11 +226,9 @@ def main():
             print "take a photo!"
             ### tell everyone to take the photo!
             takePicture()
-            GPIO.setmode(GPIO.BOARD)
-            GPIO.setup(OUTPUT_PIN, GPIO.OUT)
-            GPIO.output(OUTPUT_PIN, not GPIO.input(OUTPUT_PIN))
+            wiringpi.digitalWrite(OUTPUT_PIN,1)
             time.sleep(1)
-            GPIO.output(OUTPUT_PIN, not GPIO.input(OUTPUT_PIN))
+
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
@@ -238,13 +239,7 @@ def main():
             ts=datetime.datetime.now()
             oldTime=ts
 
-def __init__():
-    GPIO.cleanup()
-    GPIO.setmode(GPIO.BCM)
-    GPIO.setup(OUTPUT_PIN, GPIO.OUT)
-    GPIO.output(OUTPUT_PIN, False)
+
 
 if __name__ == "__main__":
-    __init__()
     main()
-    GPIO.cleanup()
