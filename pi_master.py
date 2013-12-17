@@ -14,7 +14,7 @@ import picamera
 
 global OUTPUT_PIN
 OUTPUT_PIN =16
-wiringpi.wiringPiSetupGpio()
+wiringpi.wiringPiSetupSys()
 wiringpi.pinMode(OUTPUT_PIN,0)
 
 try:
