@@ -15,7 +15,8 @@ import picamera
 global OUTPUT_PIN
 OUTPUT_PIN =16
 wiringpi.wiringPiSetupGpio()
-wiringpi.pinMode(OUTPUT_PIN,1)
+wiringpi.pinMode(OUTPUT_PIN,0)
+
 try:
     call(["sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock"], shell=True)
 except RuntimeError:
@@ -225,8 +226,10 @@ def main():
         if currentDistance > distanceForNewPhoto or diffTime.total_seconds() > minTime:
             print "take a photo!"
             ### tell everyone to take the photo!
-            takePicture()
             wiringpi.digitalWrite(OUTPUT_PIN,1)
+            takePicture()
+            wiringpi.digitalWrite(OUTPUT_PIN,0)
+
             time.sleep(1)
 
             ### now set oldpoints to the current location
