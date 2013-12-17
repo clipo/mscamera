@@ -13,6 +13,7 @@ import sys         # needed to get command line parameter which is time delay in
 import time        # nedeed to put program to sleep while waiting for next photo in low power
 import picamera
 
+
 ## need to connect to the master computer via FTP.
 wiringpi.wiringPiSetupGpio()
 INPUT_PIN=16
@@ -46,6 +47,7 @@ while True:
     # do nothing.
     wait += 1
     input=wiringpi.digitalRead(INPUT_PIN) # Read pin 1
+    sleep(1)
     print "INPUT: ",input
     if input > 0:
         takePicture()
