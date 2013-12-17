@@ -115,7 +115,7 @@ def takeAPhoto(channel):
     filename = "P-"+a+".jpg"   # give image file time-stamped name
     call(["python pi_takePhoto.py -awb sun --colfx 128:128 -o " + filename], shell=True) # call external program ro take a picture
     ## now trigger the ftp of the image to the master computer. may need to encapsulate this so that it can be a subprocess
-
+    print "finished."
 
 def setup():
     # Listen on port 2947 (gpsd) of localhost
@@ -162,6 +162,7 @@ def takePicture():
         camera.start_preview()
         time.sleep(1)
         camera.capture(filename, 'raw')
+
 
 def main():
     print ("Setup...")
@@ -228,10 +229,8 @@ def main():
             ### tell everyone to take the photo!
             wiringpi.digitalWrite(OUTPUT_PIN,1)
             takePicture()
-            wiringpi.digitalWrite(OUTPUT_PIN,0)
-
             time.sleep(1)
-
+            wiringpi.digitalWrite(OUTPUT_PIN,0)
             ### now set oldpoints to the current location
             oldNorthing = currentNorthing
             oldEasting = currentEasting
