@@ -19,7 +19,7 @@ from scipy import *
 #import scikits.datasmooth as ds
 #from lmfit import minimize, Parameters, Parameter, report_errors
 import easygui
-
+# here's a comment
 filename = easygui.fileopenbox(msg='SQLLite Filename', title='select file', filetypes=['*.jpg'])
 if filename is None:
     sys.exit(1)
